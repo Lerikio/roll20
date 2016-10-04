@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="header">
+    <div class="meta">
+      <div class="metacontainer">
+        <table>
+          <tr>
+            <td class="label"><div class="label">Nom</div></td>
+            <td><input type="text" name="attr_nom" title="@{nom}" placeholder="Nom"></td>
+            <td class="label"><div class="label">Sexe</div></td>
+            <td><input type="text" name="attr_sexe" title="@{sexe}" placeholder="Sexe" style="width:80px"></td>
+            <td class="label"><div class="label">Peuple</div></td>
+            <td><input type="text" name="attr_peuple"  placeholder="Peuple" title="@{peuple}"/></td>
+          </tr>
+          <tr>
+            <td class="label"><div class="label">Origine</div></td>
+            <td><input type="text" name="attr_origine"  placeholder="Origine" title="@{origine}"/></td>
+            <td class="label"><div class="label">Héritage</div></td>
+            <td><input type="text" name="attr_peuple"  placeholder="Peuple" title="@{peuple}"/></td>
+            <td class="label"><div class="label">Métier</div></td>
+            <td><input type="text" name="attr_metier"  placeholder="Métier" title="@{metier}"/></td>
+          </tr>
+        </table>
+      </div>
+        <div class="attributes">
+          <div class="attrcontainer">
+              <input class="attrbase" type="text" name="attr_ADR-base" value="0" title="@{ADR-base}">
+              <button class="attrlabel" type="roll" name="roll_ADR" value="[[1d10 + @{ADR-base}]]">Adresse</button>
+              <button class="init" type="roll" type="roll" name="roll_ADR_H" value="[[1d20 + @{ADR-base}]]"></button>
+          </div>
+          <div class="attrcontainer">
+              <input class="attrbase" type="text" name="attr_PUI-base" value="0" title="@{PUI-base}">
+              <button class="attrlabel" type="roll" name="roll_PUI" value="[[1d10 + @{PUI-base}]]">Puissance</button>
+              <button class="init" type="roll" type="roll" name="roll_PUI_H" value="[[1d20 + @{PUI-base}]]"></button>
+          </div>
+          <div class="attrcontainer" style="position: absolute;">
+              <input class="attrbase" type="text" name="attr_CLA-base" value="0" title="@{CLA-base}">
+              <button class="attrlabel" type="roll" name="roll_CLA" value="[[1d10 + @{CLA-base}]]">Clairvoyance</button>
+              <button class="init" type="roll" type="roll" name="roll_CLA_H" value="[[1d20 + @{CLA-base}]]"></button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
