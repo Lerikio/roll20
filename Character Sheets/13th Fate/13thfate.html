@@ -1,0 +1,460 @@
+<input type="radio" class="sheet-tab" name="attr_page" value="character" checked="checked"><span title="Personnage"></span>
+<input type="radio" class="sheet-tab" name="attr_page" value="worksheet"><span title="Création"></span>
+
+
+<div class="sheet-tab sheet-tab-character">
+    <h2>Destin du 13ème Âge</h2>
+
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <div class="sheet-input">
+                <div class="sheet-input-right">Personnage</div>
+                <input type="text" name="attr_character_name" title="@{character_name}" placeholder="Nom">
+            </div>
+            <div class="sheet-section">
+                <h4>Concept</h4>
+                <input type="text" class="sheet-invisible" name="attr_concept" title="@{concept}">
+                <h4>Trouble</h4>
+                <input type="text" class="sheet-invisible" name="attr_trouble" title="@{trouble}">
+                <h4>Aspects</h4>
+                <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-one" title="@{phase-one}">
+                <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-two" title="@{phase-two}">
+                <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-three" title="@{phase-three}">
+                <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-four" title="@{phase-four}">
+                <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-five" title="@{phase-five}">
+            </div>
+
+            <div class="sheet-section">
+                <h3><strong>Stress</strong></h3>
+                <input type="checkbox" name="attr_additional-stress" class="sheet-additional-stress-helper" style="display:none" value="1">
+                <table class="sheet-stress">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <th><h4>1</h4></th>
+                            <th><h4>2</h4></th>
+                            <th><h4>3</h4></th>
+                            <th><h4>4</h4></th>
+                            <th><h4>5</h4></th>
+                            <th><h4>6</h4></th>
+                            <th><h4>7</h4></th>
+                            <th><h4>8</h4></th>
+                        </tr>
+                        <tr class="sheet-stress-lines">
+                            <th>
+                                <h3>Physique</h3>
+                                <span></span>
+                            </th>
+                            <td>
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress1" value="1" title="@{physical-stress1}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress2" value="1" title="@{physical-stress2}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_physical-stress-3" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress3" value="1" title="@{physical-stress3}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_physical-stress-4" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress4" value="1" title="@{physical-stress4}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_physical-stress-5" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress5" value="1" title="@{physical-stress5}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_physical-stress-6" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress6" value="1" title="@{physical-stress6}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_physical-stress-7" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress7" value="1" title="@{physical-stress7}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_physical-stress-8" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress8" value="1" title="@{physical-stress8}">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr class="sheet-stress-lines">
+                            <th>
+                                <h3>Mental</h3>
+                            </th>
+                            <td>
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress1" value="1" title="@{mental-stress1}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress2" value="1" title="@{mental-stress2}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_mental-stress-3" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress3" value="1" title="@{mental-stress3}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_mental-stress-4" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress4" value="1" title="@{mental-stress4}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_mental-stress-5" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress5" value="1" title="@{mental-stress5}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_mental-stress-6" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress6" value="1" title="@{mental-stress6}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_mental-stress-7" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress7" value="1" title="@{mental-stress7}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_mental-stress-8" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress8" value="1" title="@{mental-stress8}">
+                                <span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9" class="sheet-additional-stress">
+                                <input type="checkbox" name="attr_additional-stress" class="sheet-enable-additional-stress" value="1">
+                                <span>Ajouter un Stress</span>
+                                <span>Supprimer un Stress</span>
+                            </td>
+                        </tr>
+                        <tr class="sheet-additional-stress sheet-stress-lines">
+                            <th style="max-width:100px">
+                                <h3><input type="text" name="attr_stress-name" title="@{stress-name}" placeholder="Faim" class="sheet-invisible"></h3>
+                            </th>
+                            <td>
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress1" value="1" title="@{stress1}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress2" value="1" title="@{stress2}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_stress-3" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress3" value="1" title="@{stress3}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_stress-4" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress4" value="1" title="@{stress4}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_stress-5" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress5" value="1" title="@{stress5}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_stress-6" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress6" value="1" title="@{stress6}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_stress-7" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress7" value="1" title="@{stress7}">
+                                <span></span>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_stress-8" value="1">
+                                <input class="sheet-radio-check" type="checkbox" name="attr_stress8" value="1" title="@{stress8}">
+                                <span></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="sheet-section">
+                <h3><strong>Consequences</strong></h3>
+                <fieldset class="repeating_Cons">
+                    <select name="attr_conType" style="width:25%">
+                      <option>-2: L&eacute;g&egrave;re</option>
+                      <option>-4: Mod&eacute;r&eacute;e</option>
+                      <option>-6: Grave</option>
+                    </select>
+                    <input type="text" name="attr_ConsequenceType" style="width:18%" placeholder="Type" />
+                    <span></span>
+                    <input type="text" name="attr_Consequence" style="width:54%" placeholder="Aspect" />
+                </fieldset>
+            </div>
+
+            </div>
+            <div class="sheet-col">
+                <div class="sheet-section">
+                    <h3><strong data-i18n="skills">Skills</strong></h3>
+                    <div class="sheet-superb-skills">
+                        <h4 data-i18n="superb" data-i18n-vars=" (+5)">Superb{{0}}</h4>
+                        <div class="sheet-repeating">
+                            <fieldset class="repeating_superb">
+                                <input type="text" class="sheet-invisible sheet-inline-input" name="attr_superb-skill"><span class="sheet-skill-delimiter">,</span>
+                            </fieldset>
+                        </div>
+                        <div class="sheet-slots">
+                            <span data-i18n="number-of-slots"># of Slots:</span>
+                            <input type="number" name="attr_superb-count" title="@{superb-count}" min="0" value="0" readonly="readonly">
+                            <button type="roll" name="roll_superb" title="%{superb}" value="&{template:superb} {{roll=[[4df+5+?{Bonus|0}]]}}">&nbsp;</button>
+                        </div>
+                    </div>
+                    <div class="sheet-great-skills">
+                        <h4 data-i18n="great" data-i18n-vars=" (+4)">Great{{0}}</h4>
+                        <div class="sheet-repeating">
+                            <fieldset class="repeating_great">
+                                <input type="text" class="sheet-invisible sheet-inline-input" name="attr_great-skill"><span class="sheet-skill-delimiter">,</span>
+                            </fieldset>
+                        </div>
+                        <div class="sheet-slots">
+                            <span data-i18n="number-of-slots"># of Slots:</span>
+                            <input type="number" name="attr_great-count" title="@{great-count}" min="0" value="0" readonly="readonly">
+                            <button type="roll" name="roll_great" title="%{great}" value="&{template:great} {{roll=[[4df+4+?{Bonus|0}]]}}">+-&nbsp;+</button>
+                        </div>
+                    </div>
+                    <div class="sheet-good-skills">
+                        <h4 data-i18n="good" data-i18n-vars=" (+3)">Good{{0}}</h4>
+                        <div class="sheet-repeating">
+                            <fieldset class="repeating_good">
+                                <input type="text" class="sheet-invisible sheet-inline-input" name="attr_good-skill"><span class="sheet-skill-delimiter">,</span>
+                            </fieldset>
+                        </div>
+                        <div class="sheet-slots">
+                            <span data-i18n="number-of-slots"># of Slots:</span>
+                            <input type="number" name="attr_good-count" title="@{good-count}" min="0" value="0" readonly="readonly">
+                            <button type="roll" name="roll_good" title="%{good}" value="&{template:good} {{roll=[[4df+3+?{Bonus|0}]]}}">-+++</button>
+                        </div>
+                    </div>
+                    <div class="sheet-fair-skills">
+                        <h4 data-i18n="fair" data-i18n-vars=" (+2)">Fair{{0}}</h4>
+                        <div class="sheet-repeating">
+                            <fieldset class="repeating_fair">
+                                <input type="text" class="sheet-invisible sheet-inline-input" name="attr_fair-skill"><span class="sheet-skill-delimiter">,</span>
+                            </fieldset>
+                        </div>
+                        <div class="sheet-slots">
+                            <span data-i18n="number-of-slots"># of Slots:</span>
+                            <input type="number" name="attr_fair-count" title="@{fair-count}" min="0" value="0" readonly="readonly">
+                            <button type="roll" name="roll_fair" title="%{fair}" value="&{template:fair} {{roll=[[4df+2+?{Bonus|0}]]}}">+&nbsp;++</button>
+                        </div>
+                    </div>
+                    <div class="sheet-average-skills">
+                        <h4 data-i18n="average" data-i18n-vars=" (+1)">Average{{0}}</h4>
+                        <div class="sheet-repeating">
+                            <fieldset class="repeating_average">
+                                <input type="text" class="sheet-invisible sheet-inline-input" name="attr_average-skill"><span class="sheet-skill-delimiter">,</span>
+                            </fieldset>
+                        </div>
+                        <div class="sheet-slots">
+                            <span data-i18n="number-of-slots"># of Slots:</span>
+                            <input type="number" name="attr_average-count" title="@{average-count}" min="0" value="0" readonly="readonly">
+                            <button type="roll" name="roll_average" title="%{average}" value="&{template:average} {{roll=[[4df+1+?{Bonus|0}]]}}">++++</button>
+                        </div>
+                    </div>
+                    <div class="sheet-mediocre-skills">
+                        <div class="sheet-slots">
+                            <h4 style="margin-left:0" data-i18n="mediocre" data-i18n-vars=" (+0)">Mediocre{{0}}</h4>
+                            <button type="roll" name="roll_mediocre" title="%{mediocre}" value="&{template:mediocre} {{roll=[[4df+?{Bonus|0}]]}}">----</button>
+                            <button type="roll" name="roll_poor" style="display:none" value="&{template:poor} {{roll=[[4df-1+?{Bonus|0}]]}}"></button>
+                            <button type="roll" name="roll_terrible" style="display:none" value="&{template:terrible}} {{roll=[[4df-2+?{Bonus|0}]]}}"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sheet-section" style="position:relative">
+                    <h3><strong data-i18n="stunts-and-powers">Stunts & Powers</strong></h3>
+                    <h4 style="display:inline-block;width:40px" data-i18n="cost">Cost</h4>
+                    <h4 style="display:inline-block" data-i18n="ability">Ability</h4>
+                    <div class="sheet-powers">
+                        <fieldset class="repeating_powers">
+                            <input type="number" name="attr_power-cost">
+                            <input type="text" class="sheet-invisible" name="attr_power">
+                        </fieldset>
+                    </div>
+                    <h3><strong data-i18n="additional-notes">Additional Notes</strong></h3>
+                    <textarea name="attr_additional-notes" title="@{additional-notes}"></textarea>
+                    <div class="sheet-refresh-adjust">
+                        <input type="number" name="attr_total-refresh-adjustment" title="@{total-refresh-adjustment}" readonly="readonly">
+                        <h4 data-i18n="total-refresh-adjustment">Total Refresh Adjustment</h4>
+                    </div>
+                    <div class="sheet-section sheet-ladder">
+                        <h4 data-i18n="the-ladder">The Ladder</h4>
+                        <ul>
+                            <li><span data-i18n="legendary">Legendary</span> <span class="sheet-value">+8</span></li>
+                            <li><span data-i18n="epic">Epic</span> <span class="sheet-value">+7</span></li>
+                            <li><span data-i18n="fantastic">Fantastic</span> <span class="sheet-value">+6</span></li>
+                            <li><span data-i18n="superb" data-i18n-vars=" ">Superb</span> <span class="sheet-value">+5</span></li>
+                            <li><span data-i18n="great" data-i18n-vars=" ">Great</span> <span class="sheet-value">+4</span></li>
+                            <li><span data-i18n="good" data-i18n-vars=" ">Good</span> <span class="sheet-value">+3</span></li>
+                            <li><span data-i18n="fair" data-i18n-vars=" ">Fair</span> <span class="sheet-value">+2</span></li>
+                            <li><span data-i18n="average" data-i18n-vars=" ">Average</span> <span class="sheet-value">+1</span></li>
+                            <li><span data-i18n="mediocre" data-i18n-vars=" ">Mediocre</span> <span class="sheet-value">+0</span></li>
+                            <li><span data-i18n="poor">Poor</span> <span class="sheet-value">-1</span></li>
+                            <li><span data-i18n="terrible">Terrible</span> <span class="sheet-value">-2</span></li>
+                        </ul>
+                    </div>
+                    <br style="clear:both">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sheet-tab sheet-tab-worksheet">
+        <h2 data-i18n="game-title">The Dresden Files Role-Playing Game</h2>
+        <h1 data-i18n="worksheet-title">Character Phases Worksheet</h1>
+
+        <div class="sheet-2colrow">
+            <div class="sheet-col">
+                <div class="sheet-input">
+                    <div class="sheet-input-left" data-i18n="character">Character</div>
+                    <input type="text" name="attr_character_name" title="@{character_name}">
+                </div>
+                <div class="sheet-input">
+                    <div class="sheet-input-left" data-i18n="template">Template</div>
+                    <input type="text" name="attr_template" title="@{template}">
+                </div>
+                <div class="sheet-input">
+                    <div class="sheet-input-left" data-i18n="musts">Musts</div>
+                    <input type="text" name="attr_musts" title="@{musts}">
+                </div>
+            </div>
+
+            <div class="sheet-col">
+                <div class="sheet-input">
+                    <div class="sheet-input-right" data-i18n="player">Player</div>
+                    <input type="text" name="attr_player" title="@{player}">
+                </div>
+                <div class="sheet-input">
+                    <div class="sheet-input-right" data-i18n="concept-aspect">High Concept Aspect</div>
+                    <input type="text" name="attr_concept" title="@{concept}">
+                </div>
+                <div class="sheet-input">
+                    <div class="sheet-input-right" data-i18n="trouble-aspect">Trouble Aspect</div>
+                    <input type="text" name="attr_trouble" title="@{trouble}">
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-section">
+            <h3 data-i18n="background" data-i18n-vars="<strong>|</strong>">{{0}}Background:{{1}} Where did you come from?</h3>
+            <h3 class="sheet-phase sheet-phase-one" data-i18n="phase-one" data-i18n-vars="<strong>|</strong>">Phase {{0}}one{{1}}</h3>
+            <div class="sheet-2colrow">
+                <div class="sheet-col">
+                    <p class="sheet-aspect-events" data-i18n="events">Events</p>
+                    <textarea class="sheet-aspect-events" name="attr_phase-one-events" title="@{phase-one-events}"></textarea>
+                </div>
+
+                <div class="sheet-col">
+                    <p class="sheet-aspect-desc" data-i18n="phase-one-description">
+                        What nation, region, culture are you from? What were your family circumstances like? What's your relationship with your family? How were you educated? What were your friends like? Did you get into trouble much? If you're supernatural, how early did you
+                        learn this? Were there problems?
+                    </p>
+                    <div class="sheet-input">
+                        <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
+                        <input type="text" name="attr_phase-one" title="@{phase-one}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-section">
+            <h3 data-i18n="rising-conflict" data-i18n-vars="<strong>|</strong>">{{0}}Rising Conflict:{{1}} What shaped you?</h3>
+            <h3 class="sheet-phase sheet-phase-two" data-i18n="phase-two" data-i18n-vars="<strong>|</strong>">Phase {{0}}two{{1}}</h3>
+            <div class="sheet-2colrow">
+                <div class="sheet-col">
+                    <p class="sheet-aspect-events" data-i18n="events">Events</p>
+                    <textarea class="sheet-aspect-events" name="attr_phase-two-events" title="@{phase-two-events}"></textarea>
+                </div>
+
+                <div class="sheet-col">
+                    <p class="sheet-aspect-desc" data-i18n="phase-two-description">
+                        Who were the prominent people in your life at this point? Do you have enemies? Close and fast friends? How did your high concept and trouble aspects shape you and events around you? What were the most significant choices you made? What lessons did you
+                        learn in this time?
+                    </p>
+                    <div class="sheet-input">
+                        <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
+                        <input type="text" name="attr_phase-two" title="@{phase-two}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-section">
+            <h3 data-i18n="the-story" data-i18n-vars="<strong>|</strong>">{{0}}The Story:{{1}} What was your first adventure?</h3>
+            <h3 class="sheet-phase sheet-phase-three" data-i18n="phase-three" data-i18n-vars="<strong>|</strong>">Phase {{0}}three{{1}}</h3>
+            <div class="sheet-2colrow">
+                <div class="sheet-col">
+                    <p class="sheet-aspect-events" data-i18n="events">Events</p>
+                    <textarea class="sheet-aspect-events" name="attr_phase-three-events" title="@{phase-three-events}" style="margin-left: 31px"></textarea>
+                </div>
+
+                <div class="sheet-col">
+                    <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="story-title">Story Title</p>
+                    <input type="text" class="sheet-invisible" name="attr_phase-three-story-title" title="@{phase-three-story-title}">
+                    <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="guest-starring">Guest Starring...</p>
+                    <input type="text" class="sheet-invisible" name="attr_phase-three-guest" title="@{phase-three-guest}">
+                    <div class="sheet-input">
+                        <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
+                        <input type="text" name="attr_phase-three" title="@{phase-three}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-section">
+            <h3 data-i18n="guest-star" data-i18n-vars="<strong>|</strong>">{{0}}Guest Star:{{1}} Whose path have you crossed?</h3>
+            <h3 class="sheet-phase sheet-phase-four" data-i18n="phase-four" data-i18n-vars="<strong>|</strong>">Phase {{0}}four{{1}}</h3>
+            <div class="sheet-2colrow">
+                <div class="sheet-col">
+                    <p class="sheet-aspect-events" data-i18n="events">Events</p>
+                    <textarea class="sheet-aspect-events" name="attr_phase-four-events" title="@{phase-four-events}" style="margin-left: 31px"></textarea>
+                </div>
+
+                <div class="sheet-col">
+                    <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="story-title">Story Title</p>
+                    <input type="text" class="sheet-invisible" name="attr_phase-four-story-title" title="@{phase-four-story-title}">
+                    <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="whose-story">Whose story was this? Who else was in it?</p>
+                    <input type="text" class="sheet-invisible" name="attr_phase-four-guest" title="@{phase-four-guest}">
+                    <div class="sheet-input">
+                        <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
+                        <input type="text" name="attr_phase-four" title="@{phase-four}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-section">
+            <h3 data-i18n="guest-star-redux" data-i18n-vars="<strong>|</strong>">{{0}}Guest Star Redux:{{1}} Whose else's path have you crossed?</h3>
+            <h3 class="sheet-phase sheet-phase-five" data-i18n="phase-five" data-i18n-vars="<strong>|</strong>">Phase {{0}}five{{1}}</h3>
+            <div class="sheet-2colrow">
+                <div class="sheet-col">
+                    <p class="sheet-aspect-events" data-i18n="events">Events</p>
+                    <textarea class="sheet-aspect-events" name="attr_phase-five-events" title="@{phase-five-events}" style="margin-left: 31px"></textarea>
+                </div>
+
+                <div class="sheet-col">
+                    <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="story-title">Story Title</p>
+                    <input type="text" class="sheet-invisible" name="attr_phase-five-story-title" title="@{phase-five-story-title}">
+                    <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="whose-story">Whose story was this? Who else was in it?</p>
+                    <input type="text" class="sheet-invisible" name="attr_phase-five-guest" title="@{phase-five-guest}">
+                    <div class="sheet-input">
+                        <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
+                        <input type="text" name="attr_phase-five" title="@{phase-five}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
