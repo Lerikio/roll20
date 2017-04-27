@@ -1,0 +1,324 @@
+<div class='sheet-2colrow'>
+    <div class="sheet-col-id sheet-col">
+        <div class="sheet-header">Name</div>
+        <div style="margin-bottom:5px;">
+            <input type="text" name="attr_name"  placeholder="Name" title="@{name}" style="float:left; width:32%; margin-right:2%;"/>
+            <input type="text" name="attr_surname"  placeholder="Surname" title="@{surname}" style="float:left; width:32%; margin-right:2%;"/>
+            <input type="text" name="attr_nickname"  placeholder="Nickname" title="@{nickname}" style="float:left; width:32%;"/>
+        </div>
+        <div style="margin-bottom:5px;">
+            <input type="text" name="attr_age"  placeholder="Age" title="@{age}" style="float:left; width:32%; margin-right:2%;"/>
+            <input type="text" name="attr_height"  placeholder="Height" title="@{height}" style="float:left; width:32%; margin-right:2%;"/>
+            <input type="text" name="attr_weight"  placeholder="Weight" title="@{weight}" style="float:left; width:32%;"/>
+        </div>
+        <textarea name="attr_description"  placeholder="Description" title="@{description}"></textarea>
+        <div class="sheet-header">Characteristics</div>
+        <table class="sheet-approaches">
+            <thead>
+                <tr>
+                    <th style="width:15%;"></th>
+                    <th style="width:40%;"></th>
+                    <th style="width:15%;">Base</th>
+                    <th style="width:15%;">Modifier</th>
+                    <th style="width:15%;">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Strength}} {{roll=[[1d20+@{STR}]]}}' name='roll_STR' /></td>
+                <td><label>Strength</label></td>
+                <td><input type="number" name="attr_STRBase" title="@{STRBase}" value="0"/></td>
+                <td><input type="number" name="attr_STRMod" title="@{STRMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_STR" title="@{STR}" value="(@{STRBase} + @{STRMod})" disabled="true"/></td>
+            </tr>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Perception}} {{roll=[[1d20+@{PER}]]}}' name='roll_PER' /></td>
+                <td><label>Perception</label></td>
+                <td><input type="number" name="attr_PERBase" title="@{PERBase}" value="0"/></td>
+                <td><input type="number" name="attr_PERMod" title="@{PERMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_PER" title="@{PER}" value="(@{PERBase} + @{PERMod})" disabled="true"/></td>
+            </tr>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Endurance}} {{roll=[[1d20+@{END}]]}}' name='roll_END' /></td>
+                <td><label>Endurance</label></td>
+                <td><input type="number" name="attr_ENDBase" title="@{ENDBase}" value="0"/></td>
+                <td><input type="number" name="attr_ENDMod" title="@{ENDMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_END" title="@{END}" value="(@{ENDBase} + @{ENDMod})" disabled="true"/></td>
+            </tr>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Charisma}} {{roll=[[1d20+@{CHA}]]}}' name='roll_CHA' /></td>
+                <td><label>Charisma</label></td>
+                <td><input type="number" name="attr_CHABase" title="@{CHABase}" value="0"/></td>
+                <td><input type="number" name="attr_CHAMod" title="@{CHAMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_CHA" title="@{CHA}" value="(@{CHABase} + @{CHAMod})" disabled="true"/></td>
+            </tr>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Intelligence}} {{roll=[[1d20+@{INT}]]}}' name='roll_INT' /></td>
+                <td><label>Intelligence</label></td>
+                <td><input type="number" name="attr_INTBase" title="@{INTBase}" value="0"/></td>
+                <td><input type="number" name="attr_INTMod" title="@{INTMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_INT" title="@{INT}" value="(@{INTBase} + @{INTMod})" disabled="true"/></td>
+            </tr>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Agility}} {{roll=[[1d20+@{AGI}]]}}' name='roll_AGI' /></td>
+                <td><label>Agility</label></td>
+                <td><input type="number" name="attr_AGIBase" title="@{AGIBase}" value="0"/></td>
+                <td><input type="number" name="attr_AGIMod" title="@{AGIMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_AGI" title="@{AGI}" value="(@{AGIBase} + @{AGIMod})" disabled="true"/></td>
+            </tr>
+            <tr>
+                <td><button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Luck}} {{roll=[[1d20+@{LUC}]]}}' name='roll_LUC' /></td>
+                <td><label>Luck</label></td>
+                <td><input type="number" name="attr_LUCBase" title="@{LUCBase}" value="0"/></td>
+                <td><input type="number" name="attr_LUCMod" title="@{LUCMod}" value="0"/></td>
+                <td><input type="number" class="autocalculated" name="attr_LUC" title="@{LUC}" value="(@{LUCBase} + @{LUCMod})" disabled="true"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="sheet-col-refresh sheet-col">
+       <!-- <img class="sheet-logo" style="height:75%;margin:0px auto;" src="https://scontent.flhr4-1.fna.fbcdn.net/v/t1.0-0/q87/p526x296/15107286_1129419650445540_6585932950323944124_n.jpg?oh=80af2c2b489cfd79b493ccfa12639a4b&oe=58D4CBD6" alt="Crack the Sky" /> -->
+       <div style="font-size:4em; padding-bottom:30px;" class="sheet-font_black"><b>Crack The Sky</b></div>
+        <div class="sheet-under-logo">
+            <div class="sheet-header">Quick access</div>
+                <div style=" margin-bottom:15px; width:100%;">
+                    <div style="width:50%; padding-right:5%; float:left;">
+                        <span style="font-weight: bold; font-size: 1.3em; width:33%"> Health </span>
+                        <input style="margin-left:10px;" type="number" name="attr_HP" title="@{HP}" value="0"/> /
+                        <input type="number" class="autocalculated" name="attr_HPMax" title="@{HPMax}" value="(20 + 5 * @{END})" disabled="true"/>
+                    </div>
+                    <div style="width:30%; padding-left:5%;float:left;">
+                        <button type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Initiative}} {{roll=[[1d20+@{PER}]]}}' name='roll_Initiative'>Initiative</button>
+                    </div>
+                </div> </br>
+
+                <div style='width:100%;float:left;'>
+                <div style=" margin-bottom:15px; width:100%;">
+                    <span style="font-weight: bold; font-size: 1.3em; width:20%; float:left;"> Attacks: </span>
+                    <button style="width:25%; float:left;" type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Melee Attack}} {{roll=[[1d20+@{STR}]]}}' name='roll_Melee'> Melee </button>
+                    <button  style="width:25%; float:left;" type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Ranged Attack}} {{roll=[[1d20+@{PER}]]}}' name='roll_Ranged'> Ranged </button>
+                    <button style="width:25%; float:left;" type='roll' value='&{template:FAE} {{name=@{nickname}}} {{approach=Magic Attack}} {{roll=[[1d20+@{PER}]]}}' name='roll_Magic'> Magic </button>
+                </div>
+                </div>
+                </br>
+                </br>
+                </br>
+
+                <div style='width:100%;float:left;'>
+                <div style=" margin-bottom:15px; width:100%;">
+                    <span style="font-weight: bold; font-size: 1.3em; width:25%"> Actions: </span>
+                    <span style="width:25%; margin-left:2%">
+                        Major: <input type="number" class="autocalculated" name="attr_MajorAction" title="@{MajorAction}" value="(1 + floor(@{AGI}/3))" disabled="true"/>
+                    </span>
+                    <span style="width:25%; margin-left:2%">
+                        Move: <input type="number" class="autocalculated" name="attr_MoveAction" title="@{MoveAction}" value="(1 + floor(@{AGI}/3))" disabled="true"/>
+                    </span>
+                    <span style="width:25%; margin-left:2%">
+                        Minor: <input type="number" class="autocalculated" name="attr_MinorAction" title="@{MinorAction}" value="(2 + floor(@{AGI}/2))" disabled="true"/>
+                    </span>
+
+                </div>
+                </div>
+                </br>
+
+                <div style=" margin-bottom:15px; width:100%;">
+                    <div style="width:100%; float:left;">
+                        <span style="font-weight: bold; font-size: 1.3em; width:33%"> Dodge: </span>
+                        <span style="font-size:0.7em; margin-left:5px;">Bonus:</span>
+                        <input type="number" name="attr_dodgeMod" title="@{dodgeMod}" value="0"/>
+                        <span style="font-size:0.7em; margin-left:5px;">Total:</span>
+                        <input type="number" class="autocalculated" name="attr_Dodge" title="@{Dodge}" value="(10 + @{AGI} + @{dodgeMod} + @{headRes} + @{bodyRes} + @{glovesRes} + @{legsRes} + @{bootsRes} + @{miscRes})" disabled="true"/>
+                    </div>
+                </div>
+                </br>
+                <div style=" margin-bottom:15px; width:100%;">
+                    <div style="width:100%; float:left;">
+                        <span style="font-weight: bold; font-size: 1.3em; width:33%"> Armor </span>
+                        <span style="font-size:0.7em; margin-left:5px;">Bonus:</span>
+                        <input type="number" name="attr_armorMod" title="@{armorMod}" value="0"/>
+                        <span style="font-size:0.7em; margin-left:5px;">Total:</span>
+                        <input type="number" class="autocalculated" name="attr_Armor" title="@{Armor}" value="( @{armorMod} + @{headValue} + @{bodyValue} + @{glovesValue} + @{legsValue} + @{bootsValue} + @{miscValue})" disabled="true"/>
+                    </div>
+                </div>
+                </br>
+                </br>
+                <div style=" margin-bottom:15px; width:100%;">
+                    <div style="width:100%; float:left;">
+                        <span style="font-weight: bold; font-size: 1.3em; width:33%"> Experience </span>
+                        <input style="width:100px;" type="number" name="attr_exp" value="0"/>
+                        </div>
+                </div>
+                <div class="sheet-break"></div>
+                <div class="sheet-header">Dust Powers</div>
+                <fieldset class="repeating_dustpowers" style="width:100%">
+                    <input type="text" name="attr_powerName" placeholder="Name" style="width:85%; float:left;" />
+                    <input type="number" name="attr_powerLevel" style="width:15%; float:left;"></textarea>
+                </fieldset>
+
+        </div>
+    </div>
+</div>
+
+<input name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Equipment" checked="checked" type="radio">
+<input name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Backpack" type="radio">
+<input name="attr_tab" class="sheet-tab sheet-tab3" value="3" title="Talent" type="radio">
+
+<div class='sheet-tab-content sheet-tab1' style="padding-bottom:50px;">
+        <div class="sheet-header">Armor</div>
+        <table class="sheet-approaches" style="width:100%;">
+            <thead>
+                <tr>
+                    <th style="width:15%;">Slot</th>
+                    <th style="width:30%;">Weapons</th>
+                    <th style="width:5%;">Damage</th>
+                    <th style="width:5%;">Mod</th>
+                    <th style="width:5%;">Critical</th>
+                    <th style="width:25%;">Special</th>
+                    <th style="width:15%;">Ammo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Melee (Main)</td>
+                    <td><input type="text" name="attr_meleeMWeapons" title="@{meleeMWeapons}"/></td>
+                    <td><input type="text" name="attr_meleeMDamage" title="@{meleeMDamage}" value="0"/></td>
+                    <td><input type="number" name="attr_meleeMMod" title="@{meleeMMod}" class="autocalculated" value="(@{STR})" disabled="true" /></td>
+                    <td><input type="number" name="attr_meleeMCrit" title="@{meleeMCrit}" value="0"/></td>
+                    <td><input type="text" name="attr_meleeMSpecial" title="@{meleeMSpecial}"/></td>
+                    <td><input type="number" name="attr_meleeMAmmo" title="@{meleeMAmmo}" value="0"/>/
+                        <input type="number" name="attr_meleeMAmmoMax" title="@{meleeMAmmoMax}" value="0"/></td>
+                </tr>
+                <tr>
+                    <td>Melee (Off)</td>
+                    <td><input type="text" name="attr_meleeOWeapons" title="@{meleeOWeapons}"/></td>
+                    <td><input type="text" name="attr_meleeODamage" title="@{meleeODamage}" value="0"/></td>
+                    <td><input type="number" name="attr_meleeOMod" title="@{meleeOMod}" class="autocalculated" value="(@{STR})" disabled="true" /></td>
+                    <td><input type="number" name="attr_meleeOCrit" title="@{meleeOCrit}" value="0"/></td>
+                    <td><input type="text" name="attr_meleeOSpecial" title="@{meleeOSpecial}"/></td>
+                    <td><input type="number" name="attr_meleeOAmmo" title="@{meleeOAmmo}" value="0"/>/
+                        <input type="number" name="attr_meleeOAmmoMax" title="@{meleeOAmmoMax}" value="0"/></td>
+                </tr>
+                <tr>
+                    <td>Ranged</td>
+                    <td><input type="text" name="attr_rangedWeapons" title="@{rangedWeapons}"/></td>
+                    <td><input type="text" name="attr_rangedDamage" title="@{rangedDamage}" value="0"/></td>
+                    <td><input type="number" name="attr_rangedMod" title="@{rangedMod}" class="autocalculated" value="(@{PER})" disabled="true" /></td>
+                    <td><input type="number" name="attr_rangedCrit" title="@{rangedCrit}" value="0"/></td>
+                    <td><input type="text" name="attr_rangedSpecial" title="@{rangedSpecial}"/></td>
+                    <td><input type="number" name="attr_rangedAmmo" title="@{rangedAmmo}" value="0"/>/
+                        <input type="number" name="attr_rangedAmmoMax" title="@{rangedAmmoMax}" value="0"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="sheet-header">Armor</div>
+        <table class="sheet-approaches" style="width:100%;">
+            <thead>
+                <tr>
+                    <th style="width:5%;">Slot</th>
+                    <th style="width:25%;">Armor</th>
+                    <th style="width:10%;">Armor Value</th>
+                    <th style="width:10%;">Armor Restriction</th>
+                    <th style="width:50%;">Effect</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Head</td>
+                    <td><input type="text" name="attr_headArmor" title="@{headArmor}"/></td>
+                    <td><input type="number" name="attr_headValue" title="@{headValue}" value="0"/></td>
+                    <td><input type="number" name="attr_headRes" title="@{headRes}" value="0"/></td>
+                    <td><input type="text" name="attr_headEffect" title="@{headEffect}"/></td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td><input type="text" name="attr_bodyArmor" title="@{bodyArmor}"/></td>
+                    <td><input type="number" name="attr_bodyValue" title="@{bodyValue}" value="0"/></td>
+                    <td><input type="number" name="attr_bodyRes" title="@{bodyRes}" value="0"/></td>
+                    <td><input type="text" name="attr_bodyEffect" title="@{bodyEffect}"/></td>
+                </tr>
+                <tr>
+                    <td>Gloves</td>
+                    <td><input type="text" name="attr_glovesArmor" title="@{glovesArmor}"/></td>
+                    <td><input type="number" name="attr_glovesValue" title="@{glovesValue}" value="0"/></td>
+                    <td><input type="number" name="attr_glovesRes" title="@{glovesRes}" value="0"/></td>
+                    <td><input type="text" name="attr_glovesEffect" title="@{glovesEffect}"/></td>
+                </tr>
+                <tr>
+                    <td>Legs</td>
+                    <td><input type="text" name="attr_legsArmor" title="@{legsArmor}"/></td>
+                    <td><input type="number" name="attr_legsValue" title="@{legsValue}" value="0"/></td>
+                    <td><input type="number" name="attr_legsRes" title="@{legsRes}" value="0"/></td>
+                    <td><input type="text" name="attr_legsEffect" title="@{legsEffect}"/></td>
+                </tr>
+                <tr>
+                    <td>Boots</td>
+                    <td><input type="text" name="attr_bootsArmor" title="@{bootsArmor}"/></td>
+                    <td><input type="number" name="attr_bootsValue" title="@{bootsValue}" value="0"/></td>
+                    <td><input type="number" name="attr_bootsRes" title="@{bootsRes}" value="0"/></td>
+                    <td><input type="text" name="attr_bootsEffect" title="@{bootsEffect}"/></td>
+                </tr>
+                <tr>
+                    <td>Misc</td>
+                    <td><input type="text" name="attr_miscArmor" title="@{miscArmor}"/></td>
+                    <td><input type="number" name="attr_miscValue" title="@{miscValue}" value="0"/></td>
+                    <td><input type="number" name="attr_miscRes" title="@{miscRes}" value="0"/></td>
+                    <td><input type="text" name="attr_miscEffect" title="@{miscEffect}"/></td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
+
+<div class='sheet-tab-content sheet-tab2' style="padding-bottom:50px;">
+        <div class="sheet-header">Backpack</div>
+        <div style=" margin-bottom:15px; width:100%;">
+            <div style="width:50%; padding-right:5%; float:left;">
+                <input type="text" name="attr_backpack" title="@{backpack}" value="Leather Backpack" />
+            </div>
+            <div style="width:30%; padding-left:5%;float:left;">
+                <span style="font-weight: bold; font-size: 1.3em;"> Size </span>
+                <input type="number" name="attr_backpackSize" title="@{backpackSize}" value="10"/>
+            </div>
+        </div> </br>
+        <div class="sheet-break"></div>
+        <div class="sheet-header">Inventory</div>
+        <fieldset class="repeating_items" style="width:100%;">
+           <div style="width:30%;float:left;height:75px;padding-bottom:10px;">
+            <input type="text" name="attr_itemName" placeholder="Name" style="float:left; height:50px" />
+            </br>
+            <input type="number" name="attr_itemCount" value="1" style="float:left;height:25px;" />
+            <span style="padding-left:50px;padding-right:10px;">of:</span>
+            <input type="number" name="attr_itemCountmax" value="1" style="float:right;height:25px;" />
+          </div>
+          <div style="width:70%;float:right;height:75px;padding-bottom:10px;">
+            <textarea name="attr_itemDescription" placeholder="Description" style="float:left; height:75px;"></textarea>
+       </div>
+        </fieldset>
+</div>
+
+<div class='sheet-tab-content sheet-tab3' style="padding-bottom:50px;">
+        <div class="sheet-header">Talents</div>
+        <fieldset class="repeating_talents" style="width:100%">
+            <input type="text" name="attr_talentName" placeholder="Talent" style="width:15%; float:left; height:70px;" />
+            <textarea name="attr_talentEffects" placeholder="Effect" style="width:80%; float:left; height:75px;"></textarea>
+        </fieldset>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-FAE">
+    <table>
+        <tr><th>{{name}}</th></tr>
+        {{#approach}}
+            <tr><th>{{approach}}</th></tr>
+        {{/approach}}
+
+        <tr class="arrow-container"><td><div class="arrow-right"></div></td></tr>
+
+        {{#roll}}
+            <tr><td><span class="tcat">Roll result : </span>{{roll}}</td></tr>
+        {{/roll}}
+        {{#effect}}
+            <tr><td><span class="tcat">Effect : </span>{{effect}}</td></tr>
+        {{/effect}}
+    </table>
+</rolltemplate>
