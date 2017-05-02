@@ -651,37 +651,13 @@ table.sheet-stress input[type=checkbox]:not(:checked) + input.sheet-radio-check 
     content: url(http://i.imgur.com/VmIfDEe.png) !important;
 }
 
-fieldset.repeating_Cons { font-size: 90%; }
-
-fieldset.repeating_Cons input[type=checkbox] {
-    width: 20px;
-    height: 20x;
-    position: absolute;
-    left: calc(50% - 12px);
-    top: calc(50% - 12px);
-    opacity: 0;
-    z-index: 2;
-}
-
 table.sheet-stress td {
     position: relative;
 }
 
-fieldset.repeating_Cons input[type=checkbox] + span,
+
 table.sheet-stress input[type=radio] + span,
 table.sheet-stress input.sheet-radio-check + span{ z-index: 1; }
-
-fieldset.repeating_Cons input[type=checkbox] + span::before {
-    content: url(http://i.imgur.com/oC1kT6n.png);
-    position: absolute;
-    left: calc(50% - 12px);
-    top: calc(50% - 12px);
-    z-index: 1;
-}
-
-fieldset.repeating_Cons input[type=checkbox]:checked + span::before {
-    content: url(http://i.imgur.com/kIREPO5.png);
-}
 
 .sheet-section,
 .sheet-input {
@@ -899,4 +875,27 @@ input.sheet-invisible:focus {
     font-family: "Trajan Pro";
     src: local('Trajan Pro'),
          url(http://static.cmdr-class.com/trajan-pro.otf) format('truetype');
+}
+
+.sheet-pictos {
+  font-family: pictos;
+  font-size: 1.2em;
+  text-shadow: black 0px 0px 0px;
+}
+
+input.sheet-heart-check {
+  position: absolute;
+  opacity: 0.0;
+  width: 15px;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: 5px;
+}
+
+input.sheet-heart-check + span {
+  color: #e1e1e1;
+}
+
+input.sheet-heart-check:checked + span {
+  color: #05356b;
 }

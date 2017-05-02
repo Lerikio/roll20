@@ -183,15 +183,23 @@
 
             <div class="sheet-section">
                 <h3><strong>Consequences</strong></h3>
-                <fieldset class="repeating_Cons">
+                <div style="color:#e1e1e1;margin-bottom:4px;margin-left:5px;">
+                  <div style="display:inline-block;width:25%;">-8: Extrème</div>
+                  <div style="display:inline-block;width:67%;">Modification permanente d'un aspect</div>
+                  <div style="float:right;">
+                    <input name="attr_consequenceExtreme" class="sheet-heart-check" value="1" type="checkbox">
+                    <span class="sheet-pictos">!</span>
+                  </div>
+                </div>
+                <fieldset class="repeating_cons">
                     <select name="attr_conType" style="width:25%">
                       <option>-2: L&eacute;g&egrave;re</option>
                       <option>-4: Mod&eacute;r&eacute;e</option>
                       <option>-6: Grave</option>
                     </select>
-                    <input type="text" name="attr_ConsequenceType" style="width:18%" placeholder="Type" />
-                    <span></span>
-                    <input type="text" name="attr_Consequence" style="width:54%" placeholder="Aspect" />
+                    <input type="text" name="attr_consequence" style="width:69%" placeholder="Aspect" />
+                    <input type="checkbox" name="attr_consequenceRecovered" class="sheet-heart-check" value="1"/>
+                    <span class="sheet-pictos">k</span>
                 </fieldset>
             </div>
 
