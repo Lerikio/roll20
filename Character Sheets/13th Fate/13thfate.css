@@ -877,6 +877,11 @@ input.sheet-invisible:focus {
          url(http://static.cmdr-class.com/trajan-pro.otf) format('truetype');
 }
 
+
+/****************************************************
+                Little check buttons
+ ****************************************************/
+
 .sheet-pictos {
   font-family: pictos;
   font-size: 1.2em;
@@ -898,4 +903,51 @@ input.sheet-heart-check + span {
 
 input.sheet-heart-check:checked + span {
   color: #05356b;
+}
+
+/****************************************************
+              Switch button & skill tab
+ ****************************************************/
+
+ /* === Skill Tabs === */
+ div.sheet-sktab-content { display: none; }
+
+ input.sheet-sktab-switch[value=approaches]:checked ~ div.sheet-sktab-approaches,
+ input.sheet-sktab-switch[value=skills]:checked ~ div.sheet-sktab-skills{ display: block; }
+
+ input.sheet-sktab-switch[value=approaches]:checked + label.sheet-sktab-label,
+ input.sheet-sktab-switch[value=skills]:checked + label.sheet-sktab-label{
+   background-color: #385872;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   color: #FFF;
+   font-weight: bold;
+ }
+
+ /* === Skill Switch === */
+
+ label.sheet-sktab-label {
+  width: 20%;
+  float: left;
+  display: inline-block;
+  width: 70px;
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 9px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 1px 2px 1px 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+label.sheet-sktab-label:hover {
+    cursor: pointer;
 }
