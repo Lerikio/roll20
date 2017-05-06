@@ -216,22 +216,77 @@
                 <div style="width:50%; display:inline-block;">
                     <h3 style="text-align:left; margin-left:5px;"><strong>Caractéristiques</strong></h3>
                 </div>
-                <!-- style="width:45%; display:inline-block; float: right; margin-top:3px;" -->
-                <!-- <div class="sheet-switch-field" >
 
-                </div> -->
+                <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="approaches" checked="checked">
+                <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="skills">
 
-                <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="approaches" checked="checked"><label class="sheet-sktab-label" style="float:right;">Approaches</label>
-                <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="skills"><label class="sheet-sktab-label" style="float:left;">Compétences</label>
-
-                <!-- <input type="radio" class="sheet-switch-sktab" name="attr_sktab" value="approaches" checked/><span title="Approaches"></span>
-                <input type="radio" class="sheet-switch-sktab" name="attr_sktab" value="skills" /><span title="Skills"></span> -->
                 <div class="sheet-sktab-content sheet-sktab-approaches">
-                    APPROACHES
+                  <table class="sheet-approach-table">
+                    <tr>
+                      <td class="sheet-approach-td-value">
+                        <input class="sheet-approach-value" name="attr_astucieux" title="@{astucieux}" type="number"/>
+                      </td>
+                      <td class="sheet-approach-td-roll">
+                        <button name="roll_astucieux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{astucieux}]]}}"></button>
+                      </td>
+                      <td>
+                        <span class="sheet-approach-span">Astucieux</span>
+                      </td>
+                      <td class="sheet-approach-td-label-right">
+                        <span class="sheet-approach-span">Rapide</span>
+                      </td>
+                      <td class="sheet-approach-td-roll">
+                        <button name="roll_rapide" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{rapide}]]}}"></button>
+                      </td>
+                      <td class="sheet-approach-td-value">
+                        <input class="sheet-approach-value" name="attr_rapide" title="@{rapide}" type="number"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-approach-td-value">
+                        <input class="sheet-approach-value" name="attr_flamboyant" title="@{flamboyant}" type="number"/>
+                      </td>
+                      <td class="sheet-approach-td-roll">
+                        <button name="roll_flamboyant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{flamboyant}]]}}"></button>
+                      </td>
+                      <td>
+                        <span class="sheet-approach-span">Flamboyant</span>
+                      </td>
+                      <td class="sheet-approach-td-label-right">
+                        <span class="sheet-approach-span">Soigneux</span>
+                      </td>
+                      <td class="sheet-approach-td-roll">
+                        <button name="roll_soigneux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{soigneux}]]}}"></button>
+                      </td>
+                      <td class="sheet-approach-td-value">
+                        <input class="sheet-approach-value" name="attr_soigneux" title="@{soigneux}" type="number"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-approach-td-value">
+                        <input class="sheet-approach-value" name="attr_puissant" title="@{puissant}" type="number"/>
+                      </td>
+                      <td class="sheet-approach-td-roll">
+                        <button name="roll_puissant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{puissant}]]}}"></button>
+                      </td>
+                      <td>
+                        <span class="sheet-approach-span">Puissant</span>
+                      </td>
+                      <td class="sheet-approach-td-label-right">
+                        <span class="sheet-approach-span">Sournois</span>
+                      </td>
+                      <td class="sheet-approach-td-roll">
+                        <button name="roll_sournois" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{sournois}]]}}"></button>
+                      </td>
+                      <td class="sheet-approach-td-value">
+                        <input class="sheet-approach-value" name="attr_sournois" title="@{sournois}" type="number"/>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
                 <div class="sheet-sktab-content sheet-sktab-skills">
                     <div class="sheet-superb-skills">
-                        <h4 data-i18n="superb" data-i18n-vars=" (+5)">Superb{{0}}</h4>
+                        <h4>Formidable (+5)</h4>
                         <div class="sheet-repeating">
                             <fieldset class="repeating_superb">
                                 <input type="text" class="sheet-invisible sheet-inline-input" name="attr_superb-skill"><span class="sheet-skill-delimiter">,</span>
@@ -244,7 +299,7 @@
                         </div>
                     </div>
                     <div class="sheet-great-skills">
-                        <h4 data-i18n="great" data-i18n-vars=" (+4)">Great{{0}}</h4>
+                        <h4>Excellent (+4)</h4>
                         <div class="sheet-repeating">
                             <fieldset class="repeating_great">
                                 <input type="text" class="sheet-invisible sheet-inline-input" name="attr_great-skill"><span class="sheet-skill-delimiter">,</span>
@@ -257,7 +312,7 @@
                         </div>
                     </div>
                     <div class="sheet-good-skills">
-                        <h4 data-i18n="good" data-i18n-vars=" (+3)">Good{{0}}</h4>
+                        <h4>Bon (+3)</h4>
                         <div class="sheet-repeating">
                             <fieldset class="repeating_good">
                                 <input type="text" class="sheet-invisible sheet-inline-input" name="attr_good-skill"><span class="sheet-skill-delimiter">,</span>
@@ -270,7 +325,7 @@
                         </div>
                     </div>
                     <div class="sheet-fair-skills">
-                        <h4 data-i18n="fair" data-i18n-vars=" (+2)">Fair{{0}}</h4>
+                        <h4>Passable (+2)</h4>
                         <div class="sheet-repeating">
                             <fieldset class="repeating_fair">
                                 <input type="text" class="sheet-invisible sheet-inline-input" name="attr_fair-skill"><span class="sheet-skill-delimiter">,</span>
@@ -283,7 +338,7 @@
                         </div>
                     </div>
                     <div class="sheet-average-skills">
-                        <h4 data-i18n="average" data-i18n-vars=" (+1)">Average{{0}}</h4>
+                        <h4>Moyen (+1)</h4>
                         <div class="sheet-repeating">
                             <fieldset class="repeating_average">
                                 <input type="text" class="sheet-invisible sheet-inline-input" name="attr_average-skill"><span class="sheet-skill-delimiter">,</span>
@@ -297,7 +352,7 @@
                     </div>
                     <div class="sheet-mediocre-skills">
                         <div class="sheet-slots">
-                            <h4 style="margin-left:0" data-i18n="mediocre" data-i18n-vars=" (+0)">Mediocre{{0}}</h4>
+                            <h4 style="margin-left:0">Médiocre (0)</h4>
                             <button type="roll" name="roll_mediocre" title="%{mediocre}" value="&{template:mediocre} {{roll=[[4df+?{Bonus|0}]]}}">----</button>
                             <button type="roll" name="roll_poor" style="display:none" value="&{template:poor} {{roll=[[4df-1+?{Bonus|0}]]}}"></button>
                             <button type="roll" name="roll_terrible" style="display:none" value="&{template:terrible}} {{roll=[[4df-2+?{Bonus|0}]]}}"></button>
@@ -490,3 +545,27 @@
         </div>
     </div>
 </div>
+
+<script type="text/worker">
+    on('change:repeating_superb change:repeating_great change:repeating_good change:repeating_fair change:repeating_average '
+        + 'remove:repeating_superb remove:repeating_great remove:repeating_good remove:repeating_fair remove:repeating_average', function(eventInfo) {
+        getSectionIDs('repeating_superb', function(idarray) { setAttrs({ 'superb-count': idarray.length }); });
+        getSectionIDs('repeating_great', function(idarray) { setAttrs({ 'great-count': idarray.length }); });
+        getSectionIDs('repeating_good', function(idarray) { setAttrs({ 'good-count': idarray.length }); });
+        getSectionIDs('repeating_fair', function(idarray) { setAttrs({ 'fair-count': idarray.length }); });
+        getSectionIDs('repeating_average', function(idarray) { setAttrs({ 'average-count': idarray.length }); });
+    });
+
+    on('change:repeating_powers remove:repeating_powers', function(eventInfo) {
+        getSectionIDs('repeating_powers', function(idarray) {
+            var costIds = idarray.map(function(rowid) { return 'repeating_powers_' + rowid + '_power-cost'; });
+            getAttrs(costIds, function(values) {
+                var total = i = 0;
+                for(; i < costIds.length; i++) {
+                    total += parseInt(values[costIds[i]]) || 0;y
+                }
+                setAttrs({ 'total-refresh-adjustment': total });
+            });
+        });
+    });
+</script>
