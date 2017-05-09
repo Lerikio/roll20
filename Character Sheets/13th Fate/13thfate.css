@@ -215,73 +215,9 @@ p {
     width: 65%;
 }
 
-.sheet-fate-points img {
-    width: 90%;
-    margin: 5%;
-}
-
-.sheet-fate-points,
-.sheet-fate-points + div {
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 5;
-    bottom: -10px;
-    left: -10px;
-
-    width: 150px;
-    height: 150px;
-}
-
-.sheet-fate-points {
-    background: none;
-    border: 1px solid black;
-    clip: rect(0, 152px, 142px, 10px);
-    z-index: 6;
-}
-
-.sheet-fp-overlay {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-    z-index: 7;
-    text-shadow: -3px -3px 0 white,
-                  3px -3px 0 white,
-                 -3px  3px 0 white,
-                  3px  3px 0 white;
-}
 .charsheet.lang-es .sheet-fp-overlay {
     top: 32%;
     left: 0;
-}
-
-.sheet-base-refresh h4,
-.sheet-adjusted-refresh h4,
-.sheet-current-fate-points h4 { display: inline-block; }
-
-.sheet-base-refresh,
-.sheet-adjusted-refresh,
-.sheet-current-fate-points {
-    position: relative;
-    top: -15px;
-    left: 130px;
-    z-index: 12;
-}
-
-.sheet-base-refresh {
-    top: -15px;
-    left: 115px;
-}
-
-.sheet-current-fate-points {
-    top: -12px;
-    left: 127px;
-}
-
-.sheet-base-refresh input[type=number],
-.sheet-adjusted-refresh input[type=number],
-.sheet-current-fate-points input[type=number] {
-    border: 4px double black;
 }
 
 input[type=number] {
@@ -289,8 +225,6 @@ input[type=number] {
     height: 40px;
     width: 40px !important;
     text-align: center;
-    border: 1px solid black;
-
     -moz-appearance: textfield;
 }
 
@@ -876,6 +810,18 @@ input.sheet-invisible:focus {
          url(http://static.cmdr-class.com/trajan-pro.otf) format('truetype');
 }
 
+
+td.sheet-fate-points-header {
+  text-align: center;
+}
+
+td.sheet-fate-points-value {
+  text-align: center;
+}
+
+td.sheet-fate-points-value input {
+  text-align: center;
+}
 
 /****************************************************
                 Little check buttons

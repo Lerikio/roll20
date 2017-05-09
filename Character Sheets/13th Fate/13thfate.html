@@ -62,7 +62,6 @@
                                 <span></span>
                             </td>
                             <td>
-                                <input type="checkbox" name="attr_physical-stress-3" value="1">
                                 <input class="sheet-radio-check" type="checkbox" name="attr_physical-stress3" value="1" title="@{physical-stress3}">
                                 <span></span>
                             </td>
@@ -105,7 +104,6 @@
                                 <span></span>
                             </td>
                             <td>
-                                <input type="checkbox" name="attr_mental-stress-3" value="1">
                                 <input class="sheet-radio-check" type="checkbox" name="attr_mental-stress3" value="1" title="@{mental-stress3}">
                                 <span></span>
                             </td>
@@ -212,6 +210,33 @@
             </div>
         </div>
         <div class="sheet-col">
+            <div class="sheet-section">
+              <table>
+                <tr>
+                  <td class="sheet-fate-points-header">
+                    Points de Destin
+                  </td>
+                  <td class="sheet-fate-points-header">
+                    Restauration
+                  </td>
+                  <td class="sheet-fate-points-header" style="width:25%;">
+                    Niveau
+                  </td>
+                </tr>
+                <tr>
+                  <td class="sheet-fate-points-value">
+                    <input name="attr_fate_points" title="@{fate_points}" type="number" value="3"/>
+                  </td>
+                  <td class="sheet-fate-points-value">
+                    <input name="attr_refresh" title="@{fate_points}" type="number" value="3"/>
+                  </td>
+                  <td class="sheet-fate-points-value">
+                    <input name="attr_refresh_default" title="@{fate_points}" type="number" value="3"/>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
             <div class="sheet-section">
                 <div style="width:50%; display:inline-block;">
                     <h3 style="text-align:left; margin-left:5px;"><strong>Caractéristiques</strong></h3>
