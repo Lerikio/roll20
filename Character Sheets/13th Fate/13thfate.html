@@ -210,6 +210,11 @@
             </div>
         </div>
         <div class="sheet-col">
+
+          <div style="position:relative;">
+            <img style="position:absolute; left:0;" src="http://www.faterpg.com/wp-content/uploads/2013/06/Powered-by-Fate-Final-Light-BG.png" />
+            <img style="position:absolute; right:0;" src="http://site.pelgranepress.com/files/13th_Age/13thagecompatible.png"  />
+          </div>
             <div class="sheet-section">
               <table>
                 <tr>
@@ -387,38 +392,14 @@
             </div>
 
             <div class="sheet-section" style="position:relative">
-                <h3><strong data-i18n="stunts-and-powers">Stunts & Powers</strong></h3>
-                <h4 style="display:inline-block;width:40px" data-i18n="cost">Cost</h4>
-                <h4 style="display:inline-block" data-i18n="ability">Ability</h4>
-                <div class="sheet-powers">
-                    <fieldset class="repeating_powers">
-                        <input type="number" name="attr_power-cost">
-                        <input type="text" class="sheet-invisible" name="attr_power">
+                <h3><strong>Prouesses</strong></h3>
+                <div class="sheet-stunts">
+                    <fieldset class="repeating_stunts">
+                        <input type="text" name="attr_stunt-name" placeholder="Nom de la prouesse">
+                        <textarea class="sheet-autoresize-textarea" name="attr_stunt-description" placeholder="Description de la prouesse"></textarea>
+                        <hr class="sheet-ruler"/>
                     </fieldset>
                 </div>
-                <h3><strong data-i18n="additional-notes">Additional Notes</strong></h3>
-                <textarea name="attr_additional-notes" title="@{additional-notes}"></textarea>
-                <div class="sheet-refresh-adjust">
-                    <input type="number" name="attr_total-refresh-adjustment" title="@{total-refresh-adjustment}" readonly="readonly">
-                    <h4 data-i18n="total-refresh-adjustment">Total Refresh Adjustment</h4>
-                </div>
-                <div class="sheet-section sheet-ladder">
-                    <h4 data-i18n="the-ladder">The Ladder</h4>
-                    <ul>
-                        <li><span data-i18n="legendary">Legendary</span> <span class="sheet-value">+8</span></li>
-                        <li><span data-i18n="epic">Epic</span> <span class="sheet-value">+7</span></li>
-                        <li><span data-i18n="fantastic">Fantastic</span> <span class="sheet-value">+6</span></li>
-                        <li><span data-i18n="superb" data-i18n-vars=" ">Superb</span> <span class="sheet-value">+5</span></li>
-                        <li><span data-i18n="great" data-i18n-vars=" ">Great</span> <span class="sheet-value">+4</span></li>
-                        <li><span data-i18n="good" data-i18n-vars=" ">Good</span> <span class="sheet-value">+3</span></li>
-                        <li><span data-i18n="fair" data-i18n-vars=" ">Fair</span> <span class="sheet-value">+2</span></li>
-                        <li><span data-i18n="average" data-i18n-vars=" ">Average</span> <span class="sheet-value">+1</span></li>
-                        <li><span data-i18n="mediocre" data-i18n-vars=" ">Mediocre</span> <span class="sheet-value">+0</span></li>
-                        <li><span data-i18n="poor">Poor</span> <span class="sheet-value">-1</span></li>
-                        <li><span data-i18n="terrible">Terrible</span> <span class="sheet-value">-2</span></li>
-                    </ul>
-                </div>
-                <br style="clear:both">
             </div>
         </div>
     </div>
