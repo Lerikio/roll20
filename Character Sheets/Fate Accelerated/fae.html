@@ -1,0 +1,200 @@
+<div class="sheet-original">
+    <div class="sheet-2colrow" style="margin-bottom:5px;">
+        <div class="sheet-col-id sheet-col">
+            <div class="sheet-header">
+                Identité</div>
+            <input name="attr_name" placeholder="Nom" title="@{name}" type="text" />
+            <textarea name="attr_description" placeholder="Description" title="@{description}"></textarea>
+        </div>
+        <!-- .section-id -->
+        <div class="sheet-col-refresh sheet-col">
+            <div style="text-align: center;margin: 5px;">
+                <img alt="FATE ACCELERATED" class="sheet-logo" src="https://1.bp.blogspot.com/-xNVoFuu2new/VfUBhh9Um6I/AAAAAAAAAII/A0RiRT_jzx4/s1600/Fate%2BAccelerated.png" />
+            </div>
+        </div>
+        <!-- .section-refresh -->
+    </div>
+    <div class="sheet-break">
+    </div>
+    <div class="sheet-2colrow">
+        <div class="sheet-col-aspects sheet-col">
+            <div class="sheet-header">
+                Aspects</div>
+            <input name="attr_high_concept" placeholder="Concept" title="@{high_concept}" type="text" />
+            <input name="attr_trouble" placeholder="Trouble" title="@{trouble}" type="text" />
+            <fieldset class="repeating_aspects">
+                <input name="attr_aspect" type="text" /> </fieldset>
+        </div>
+        <!-- .section-aspects -->
+        <div class="sheet-col-approaches sheet-col">
+            <div class="sheet-header">
+                Approches</div>
+            <table class="sheet-approaches">
+                <tr>
+                    <td>
+                        <button name="roll_astucieux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Astucieux}} {{roll=[[4DF+@{astucieux}]]}}">
+					</button></td>
+                    <td><label>Astucieux</label></td>
+                    <td>
+                        <input name="attr_astucieux" title="@{astucieux}" type="number" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="roll_flamboyant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Flamboyant}} {{roll=[[4DF+@{flamboyant}]]}}">
+					</button></td>
+                    <td><label>Flamboyant</label></td>
+                    <td>
+                        <input name="attr_flamboyant" title="@{flamboyant}" type="number" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="roll_puissant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Puissant}} {{roll=[[4DF+@{puissant}]]}}">
+					</button></td>
+                    <td><label>Puissant</label></td>
+                    <td>
+                        <input name="attr_puissant" title="@{puissant}" type="number" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="roll_rapide" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Rapide}} {{roll=[[4DF+@{rapide}]]}}">
+					</button></td>
+                    <td><label>Rapide</label></td>
+                    <td>
+                        <input name="attr_rapide" title="@{rapide}" type="number" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="roll_soigneux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Soigneux}} {{roll=[[4DF+@{soigneux}]]}}">
+					</button></td>
+                    <td><label>Soigneux</label></td>
+                    <td>
+                        <input name="attr_soigneux" title="@{soigneux}" type="number" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="roll_sournois" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Sournois}} {{roll=[[4DF+@{sournois}]]}}">
+					</button></td>
+                    <td><label>Sournois</label></td>
+                    <td>
+                        <input name="attr_sournois" title="@{sournois}" type="number" /></td>
+                </tr>
+            </table>
+        </div>
+        <!-- .section-approaches -->
+    </div>
+
+    <div class="sheet-2colrow">
+        <div class="sheet-col-consequences sheet-col">
+            <div class="sheet-header">
+                Consequences</div>
+            <div style="color:#e1e1e1;margin-bottom:4px;margin-left:5px;">
+                <div style="display:inline-block;width:25%;">-8: Extrème</div>
+                <div style="display:inline-block;width:67%;">Modification permanente d'un aspect</div>
+                <div style="float:right;">
+                    <input name="attr_consequenceExtreme" class="sheet-heart-check" value="1" type="checkbox">
+                    <span class="sheet-pictos">!</span>
+                </div>
+            </div>
+            <fieldset class="repeating_cons">
+                <select name="attr_conType" style="width:25%">
+									<option>-2: L&eacute;g&egrave;re</option>
+									<option>-4: Mod&eacute;r&eacute;e</option>
+									<option>-6: Grave</option>
+								</select>
+                <input type="text" name="attr_consequence" style="width:69%" placeholder="Aspect" />
+                <div style="float:right;">
+                    <input type="checkbox" name="attr_consequenceRecovered" class="sheet-heart-check" value="1" />
+                    <span class="sheet-pictos">k</span>
+                </div>
+            </fieldset>
+        </div>
+        <!-- .section-consequences -->
+        <div class="sheet-col-stress sheet-col ">
+            <div class="sheet-header">
+                Stress</div>
+            <table class="sheet-stress">
+                <tr>
+                    <td>
+                        <div class="sheet-checkbox-label-div">
+                            <input class="sheet-stress-check" name="attr_stress1" title="@{stress1}" type="checkbox" value="1" />
+                            <label></label></div>
+                    </td>
+                    <td>
+                        <div class="sheet-checkbox-label-div">
+                            <input class="sheet-stress-check" name="attr_stress2" title="@{stress2}" type="checkbox" value="2" />
+                            <label></label></div>
+                    </td>
+                    <td>
+                        <div class="sheet-checkbox-label-div">
+                            <input class="sheet-stress-check" name="attr_stress3" title="@{stress3}" type="checkbox" value="3" />
+                            <label></label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>1</h4>
+                    </th>
+                    <th>
+                        <h4>2</h4>
+                    </th>
+                    <th>
+                        <h4>3</h4>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+            <div class="sheet-col-stunts sheet-col " style="width: 100%">
+                <div class="sheet-header">
+                    Prouesse</div>
+                <fieldset class="repeating_stunts">
+                    <input type="text" name="attr_stunt-name" placeholder="Nom de la prouesse">
+                    <textarea class="sheet-autoresize-textarea" name="attr_stunt-description" placeholder="Description de la prouesse"></textarea>
+                </fieldset>
+                <!-- .section-stunts -->
+            </div>
+        </div>
+        <div class="sheet-col">
+            <div class="sheet-col-extras sheet-col " style="width: 100%">
+                <div class="sheet-header">
+                    Extras</div>
+                <fieldset class="repeating_extras">
+                    <input type="text" name="attr_extra-name" placeholder="Extra">
+                    <textarea class="sheet-autoresize-textarea" name="attr_extra-description" placeholder="Description"></textarea>
+                </fieldset>
+                <!-- .section-extra -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<rolltemplate class="sheet-rolltemplate-FAE">
+    <table>
+        <tr>
+            <th>{{name}}</th>
+        </tr>
+        {{#approach}}
+        <tr>
+            <th>{{approach}}</th>
+        </tr>
+        {{/approach}}
+        <tr class="arrow-container">
+            <td>
+                <div class="arrow-right">
+                </div>
+            </td>
+        </tr>
+        {{#roll}}
+        <tr>
+            <td><span class="tcat">Roll: </span>{{roll}}</td>
+        </tr>
+        {{/roll}} {{#effect}}
+        <tr>
+            <td><span class="tcat">Effect: </span>{{effect}}</td>
+        </tr>
+        {{/effect}}
+    </table>
+</rolltemplate>
