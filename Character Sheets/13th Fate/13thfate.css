@@ -151,6 +151,13 @@ p {
     border: none;
 }
 
+textarea.sheet-textarea-goodsize {
+    width: calc(100% - 10px);
+    height: 4em;
+    font-size: 0.8em;
+    border: none;
+}
+
 .sheet-inline-input {
     max-width: 8em;
 }
@@ -215,7 +222,7 @@ p {
     left: 0;
 }
 
-input[type=number] {
+input[type=number].sheet-round-number {
     border-radius: 50%;
     height: 40px;
     width: 40px !important;
@@ -295,96 +302,26 @@ input.sheet-tab + span::before {
     content: attr(title);
 }
 
-input.sheet-tab[value=worksheet] {
+input.sheet-tab[value=character] {
     top: 75px;
     right: 25px;
     height: 72px;
 }
-.charsheet.lang-es input.sheet-tab[value=worksheet] {
-    top: 74px;
-    height: 95px;
-}
-input.sheet-tab[value=worksheet] + span {
+
+input.sheet-tab[value=character] + span {
     top: 100px;
-    right: -1px;
-}
-.charsheet.lang-es input.sheet-tab[value=worksheet] + span {
-    top: 110px;
-    right: -12px;
+    right: -6px;
 }
 
-input.sheet-tab[value=character] {
+input.sheet-tab[value=inventory] {
     top: 150px;
     right: 25px;
     height: 66px;
 }
-.charsheet.lang-es input.sheet-tab[value=character] {
-    top: 170px;
-    right: 24px;
-    height: 68px;
-}
-input.sheet-tab[value=character] + span {
-    top: 172px;
-    right: 2px;
-}
-.charsheet.lang-es input.sheet-tab[value=character] + span {
-    top: 193px;
-    right: 1px;
-}
 
-input.sheet-tab[value=city-high] {
-    top: 219px;
-    right: 24px;
-    height: 34px;
-}
-.charsheet.lang-es input.sheet-tab[value=city-high] {
-    top: 240px;
-    right: 25px;
-    height: 50px;
-}
-input.sheet-tab[value=city-high] + span {
-    top: 225px;
-    right: 18px;
-}
-.charsheet.lang-es input.sheet-tab[value=city-high] + span {
-    top: 254px;
-    right: 10px;
-}
-
-input.sheet-tab[value=city-locs] {
-    top: 256px;
-    right: 24px;
-    height: 66px;
-}
-.charsheet.lang-es input.sheet-tab[value=city-locs] {
-    top: 293px;
-    height: 96px;
-}
-input.sheet-tab[value=city-locs] + span {
-    top: 278px;
-    right: 2px;
-}
-.charsheet.lang-es input.sheet-tab[value=city-locs] + span {
-    top: 330px;
-    right: -13px;
-}
-
-input.sheet-tab[value=city-face] {
-    top: 325px;
-    right: 24px;
-    height: 46px;
-}
-.charsheet.lang-es input.sheet-tab[value=city-face] {
-    top: 391px;
-    height: 56px;
-}
-input.sheet-tab[value=city-face] + span {
-    top: 337px;
-    right: 12px;
-}
-.charsheet-lang-es input.sheet-tab[value=city-face] + span {
-    top: 408px;
-    right: 7px;
+input.sheet-tab[value=inventory] + span {
+    top: 175px;
+    right: 0px;
 }
 
 input.sheet-tab:checked + span {
@@ -403,10 +340,7 @@ div.sheet-tab {
 }
 
 input.sheet-tab[value=character]:checked ~ div.sheet-tab-character,
-input.sheet-tab[value=worksheet]:checked ~ div.sheet-tab-worksheet,
-input.sheet-tab[value=city-high]:checked ~ div.sheet-tab-city-high,
-input.sheet-tab[value=city-locs]:checked ~ div.sheet-tab-city-locs,
-input.sheet-tab[value=city-face]:checked ~ div.sheet-tab-city-face { display: block; }
+input.sheet-tab[value=inventory]:checked ~ div.sheet-tab-inventory { display: block; }
 
 h1,h2,h3,h4,p.sheet-consequence {
     font-family: "Trajan Pro", serif;
@@ -837,6 +771,22 @@ hr.sheet-ruler {
   text-shadow: black 0px 0px 0px;
 }
 
+input.sheet-extreme-check {
+  position: absolute;
+  opacity: 0.0;
+  width: 98%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+input.sheet-extreme-check + div {
+  color: #e1e1e1;
+}
+
+input.sheet-extreme-check:checked + div {
+  color: #a40000;
+}
+
 input.sheet-heart-check {
   position: absolute;
   opacity: 0.0;
@@ -875,6 +825,9 @@ input.sheet-sktab-switch {
 input.sheet-approach-value {
   width: 30px !important;
   height: 30px !important;
+  border-radius: 50%;
+  text-align: center;
+  -moz-appearance: textfield;
 }
 
 td.sheet-approach-td-value {
@@ -907,4 +860,8 @@ table.sheet-approach-table span.sheet-approach-span {
   margin-left: 5px;
   margin-right: 5px;
   float: none;
+}
+
+img.sheet-grayscale {
+  filter: grayscale(90%);
 }

@@ -1,15 +1,13 @@
 <input type="radio" class="sheet-tab" name="attr_page" value="character" checked="checked"><span title="Personnage"></span>
-<input type="radio" class="sheet-tab" name="attr_page" value="worksheet"><span title="Création"></span>
+<input type="radio" class="sheet-tab" name="attr_page" value="inventory"><span title="Inventaire"></span>
 
 
 <div class="sheet-tab sheet-tab-character">
-    <h2>Destin du 13ème Âge</h2>
-
     <div class="sheet-2colrow">
         <div class="sheet-col">
             <div class="sheet-input">
                 <div class="sheet-input-right">Personnage</div>
-                <input type="text" name="attr_character_name" title="@{character_name}" placeholder="Nom">
+                <input type="text" name="attr_name" title="@{name}" placeholder="Nom">
             </div>
             <div class="sheet-section">
                 <h4>Concept</h4>
@@ -189,11 +187,11 @@
 
             <div class="sheet-section">
                 <h3><strong>Consequences</strong></h3>
-                <div style="color:#e1e1e1;margin-bottom:4px;margin-left:5px;">
+                <input name="attr_consequenceExtreme" class="sheet-extreme-check" value="1" type="checkbox">
+                <div style="margin-bottom:4px;margin-left:5px;">
                     <div style="display:inline-block;width:25%;">-8: Extrème</div>
                     <div style="display:inline-block;width:67%;">Modification permanente d'un aspect</div>
                     <div style="float:right;">
-                        <input name="attr_consequenceExtreme" class="sheet-heart-check" value="1" type="checkbox">
                         <span class="sheet-pictos">!</span>
                     </div>
                 </div>
@@ -204,44 +202,44 @@
                       <option>-6: Grave</option>
                     </select>
                     <input type="text" name="attr_consequence" style="width:69%" placeholder="Aspect" />
-                    <div style="float:right;">
-                      <input type="checkbox" name="attr_consequenceRecovered" class="sheet-heart-check" value="1" />
-                      <span class="sheet-pictos">k</span>
+                    <div style="float:right;padding-top:5px;">
+                        <input type="checkbox" name="attr_consequenceRecovered" class="sheet-heart-check" value="1" />
+                        <span class="sheet-pictos">k</span>
                     </div>
                 </fieldset>
             </div>
         </div>
         <div class="sheet-col">
 
-          <div style="position:relative;">
-            <img style="position:absolute; left:0;" src="http://www.faterpg.com/wp-content/uploads/2013/06/Powered-by-Fate-Final-Light-BG.png" />
-            <img style="position:absolute; right:0;" src="http://site.pelgranepress.com/files/13th_Age/13thagecompatible.png"  />
-          </div>
+            <div style="position:relative; height:90px;">
+                <img class="sheet-grayscale" style="width: 200px;display: inline-block;float: left;margin-left: 30px;" src="http://www.faterpg.com/wp-content/uploads/2013/06/Powered-by-Fate-Final-Light-BG.png" />
+                <img class="sheet-grayscale" style="width: 90px;float: right;margin-right: 30px;" src="http://site.pelgranepress.com/files/13th_Age/13thagecompatible.png" />
+            </div>
             <div class="sheet-section">
-              <table>
-                <tr>
-                  <td class="sheet-fate-points-header">
-                    Points de Destin
-                  </td>
-                  <td class="sheet-fate-points-header">
-                    Restauration
-                  </td>
-                  <td class="sheet-fate-points-header" style="width:25%;">
-                    Niveau
-                  </td>
-                </tr>
-                <tr>
-                  <td class="sheet-fate-points-value">
-                    <input name="attr_fate_points" title="@{fate_points}" type="number" value="3"/>
-                  </td>
-                  <td class="sheet-fate-points-value">
-                    <input name="attr_refresh" title="@{fate_points}" type="number" value="3"/>
-                  </td>
-                  <td class="sheet-fate-points-value">
-                    <input name="attr_refresh_default" title="@{fate_points}" type="number" value="3"/>
-                  </td>
-                </tr>
-              </table>
+                <table>
+                    <tr>
+                        <td class="sheet-fate-points-header">
+                            Points de Destin
+                        </td>
+                        <td class="sheet-fate-points-header">
+                            Restauration
+                        </td>
+                        <td class="sheet-fate-points-header" style="width:25%;">
+                            Niveau
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-fate-points-value">
+                            <input class="sheet-round-number" name="attr_fate_points" title="@{fate_points}" type="number" value="3" />
+                        </td>
+                        <td class="sheet-fate-points-value">
+                            <input class="sheet-round-number" name="attr_refresh" title="@{fate_points}" type="number" value="3" />
+                        </td>
+                        <td class="sheet-fate-points-value">
+                            <input class="sheet-round-number" name="attr_refresh_default" title="@{fate_points}" type="number" value="3" />
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <div class="sheet-section">
@@ -253,68 +251,68 @@
                 <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="skills">
 
                 <div class="sheet-sktab-content sheet-sktab-approaches">
-                  <table class="sheet-approach-table">
-                    <tr>
-                      <td class="sheet-approach-td-value">
-                        <input class="sheet-approach-value" name="attr_astucieux" title="@{astucieux}" type="number"/>
-                      </td>
-                      <td class="sheet-approach-td-roll">
-                        <button name="roll_astucieux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{astucieux}]]}}"></button>
-                      </td>
-                      <td>
-                        <span class="sheet-approach-span">Astucieux</span>
-                      </td>
-                      <td class="sheet-approach-td-label-right">
-                        <span class="sheet-approach-span">Rapide</span>
-                      </td>
-                      <td class="sheet-approach-td-roll">
-                        <button name="roll_rapide" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{rapide}]]}}"></button>
-                      </td>
-                      <td class="sheet-approach-td-value">
-                        <input class="sheet-approach-value" name="attr_rapide" title="@{rapide}" type="number"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="sheet-approach-td-value">
-                        <input class="sheet-approach-value" name="attr_flamboyant" title="@{flamboyant}" type="number"/>
-                      </td>
-                      <td class="sheet-approach-td-roll">
-                        <button name="roll_flamboyant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{flamboyant}]]}}"></button>
-                      </td>
-                      <td>
-                        <span class="sheet-approach-span">Flamboyant</span>
-                      </td>
-                      <td class="sheet-approach-td-label-right">
-                        <span class="sheet-approach-span">Soigneux</span>
-                      </td>
-                      <td class="sheet-approach-td-roll">
-                        <button name="roll_soigneux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{soigneux}]]}}"></button>
-                      </td>
-                      <td class="sheet-approach-td-value">
-                        <input class="sheet-approach-value" name="attr_soigneux" title="@{soigneux}" type="number"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="sheet-approach-td-value">
-                        <input class="sheet-approach-value" name="attr_puissant" title="@{puissant}" type="number"/>
-                      </td>
-                      <td class="sheet-approach-td-roll">
-                        <button name="roll_puissant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{puissant}]]}}"></button>
-                      </td>
-                      <td>
-                        <span class="sheet-approach-span">Puissant</span>
-                      </td>
-                      <td class="sheet-approach-td-label-right">
-                        <span class="sheet-approach-span">Sournois</span>
-                      </td>
-                      <td class="sheet-approach-td-roll">
-                        <button name="roll_sournois" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{sournois}]]}}"></button>
-                      </td>
-                      <td class="sheet-approach-td-value">
-                        <input class="sheet-approach-value" name="attr_sournois" title="@{sournois}" type="number"/>
-                      </td>
-                    </tr>
-                  </table>
+                    <table class="sheet-approach-table">
+                        <tr>
+                            <td class="sheet-approach-td-value">
+                                <input class="sheet-approach-value" name="attr_astucieux" title="@{astucieux}" type="number" />
+                            </td>
+                            <td class="sheet-approach-td-roll">
+                                <button name="roll_astucieux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{astucieux}]]}}"></button>
+                            </td>
+                            <td>
+                                <span class="sheet-approach-span">Astucieux</span>
+                            </td>
+                            <td class="sheet-approach-td-label-right">
+                                <span class="sheet-approach-span">Rapide</span>
+                            </td>
+                            <td class="sheet-approach-td-roll">
+                                <button name="roll_rapide" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{rapide}]]}}"></button>
+                            </td>
+                            <td class="sheet-approach-td-value">
+                                <input class="sheet-approach-value" name="attr_rapide" title="@{rapide}" type="number" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sheet-approach-td-value">
+                                <input class="sheet-approach-value" name="attr_flamboyant" title="@{flamboyant}" type="number" />
+                            </td>
+                            <td class="sheet-approach-td-roll">
+                                <button name="roll_flamboyant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{flamboyant}]]}}"></button>
+                            </td>
+                            <td>
+                                <span class="sheet-approach-span">Flamboyant</span>
+                            </td>
+                            <td class="sheet-approach-td-label-right">
+                                <span class="sheet-approach-span">Soigneux</span>
+                            </td>
+                            <td class="sheet-approach-td-roll">
+                                <button name="roll_soigneux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{soigneux}]]}}"></button>
+                            </td>
+                            <td class="sheet-approach-td-value">
+                                <input class="sheet-approach-value" name="attr_soigneux" title="@{soigneux}" type="number" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sheet-approach-td-value">
+                                <input class="sheet-approach-value" name="attr_puissant" title="@{puissant}" type="number" />
+                            </td>
+                            <td class="sheet-approach-td-roll">
+                                <button name="roll_puissant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{puissant}]]}}"></button>
+                            </td>
+                            <td>
+                                <span class="sheet-approach-span">Puissant</span>
+                            </td>
+                            <td class="sheet-approach-td-label-right">
+                                <span class="sheet-approach-span">Sournois</span>
+                            </td>
+                            <td class="sheet-approach-td-roll">
+                                <button name="roll_sournois" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{sournois}]]}}"></button>
+                            </td>
+                            <td class="sheet-approach-td-value">
+                                <input class="sheet-approach-value" name="attr_sournois" title="@{sournois}" type="number" />
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="sheet-sktab-content sheet-sktab-skills">
                     <div class="sheet-superb-skills">
@@ -325,8 +323,8 @@
                             </fieldset>
                         </div>
                         <div class="sheet-slots">
-                            <span data-i18n="number-of-slots"># of Slots:</span>
-                            <input type="number" name="attr_superb-count" title="@{superb-count}" min="0" value="0" readonly="readonly">
+                            <span>Emplacements utilisés:</span>
+                            <input class="sheet-round-number" type="number" name="attr_superb-count" title="@{superb-count}" min="0" value="0" readonly="readonly">
                             <button type="roll" name="roll_superb" title="%{superb}" value="&{template:superb} {{roll=[[4df+5+?{Bonus|0}]]}}">&nbsp;</button>
                         </div>
                     </div>
@@ -338,8 +336,8 @@
                             </fieldset>
                         </div>
                         <div class="sheet-slots">
-                            <span data-i18n="number-of-slots"># of Slots:</span>
-                            <input type="number" name="attr_great-count" title="@{great-count}" min="0" value="0" readonly="readonly">
+                            <span>Emplacements utilisés:</span>
+                            <input class="sheet-round-number" type="number" name="attr_great-count" title="@{great-count}" min="0" value="0" readonly="readonly">
                             <button type="roll" name="roll_great" title="%{great}" value="&{template:great} {{roll=[[4df+4+?{Bonus|0}]]}}">+-&nbsp;+</button>
                         </div>
                     </div>
@@ -351,8 +349,8 @@
                             </fieldset>
                         </div>
                         <div class="sheet-slots">
-                            <span data-i18n="number-of-slots"># of Slots:</span>
-                            <input type="number" name="attr_good-count" title="@{good-count}" min="0" value="0" readonly="readonly">
+                            <span>Emplacements utilisés:</span>
+                            <input class="sheet-round-number" type="number" name="attr_good-count" title="@{good-count}" min="0" value="0" readonly="readonly">
                             <button type="roll" name="roll_good" title="%{good}" value="&{template:good} {{roll=[[4df+3+?{Bonus|0}]]}}">-+++</button>
                         </div>
                     </div>
@@ -364,8 +362,8 @@
                             </fieldset>
                         </div>
                         <div class="sheet-slots">
-                            <span data-i18n="number-of-slots"># of Slots:</span>
-                            <input type="number" name="attr_fair-count" title="@{fair-count}" min="0" value="0" readonly="readonly">
+                            <span>Emplacements utilisés:</span>
+                            <input class="sheet-round-number" type="number" name="attr_fair-count" title="@{fair-count}" min="0" value="0" readonly="readonly">
                             <button type="roll" name="roll_fair" title="%{fair}" value="&{template:fair} {{roll=[[4df+2+?{Bonus|0}]]}}">+&nbsp;++</button>
                         </div>
                     </div>
@@ -377,8 +375,8 @@
                             </fieldset>
                         </div>
                         <div class="sheet-slots">
-                            <span data-i18n="number-of-slots"># of Slots:</span>
-                            <input type="number" name="attr_average-count" title="@{average-count}" min="0" value="0" readonly="readonly">
+                            <span>Emplacements utilisés:</span>
+                            <input class="sheet-round-number" type="number" name="attr_average-count" title="@{average-count}" min="0" value="0" readonly="readonly">
                             <button type="roll" name="roll_average" title="%{average}" value="&{template:average} {{roll=[[4df+1+?{Bonus|0}]]}}">++++</button>
                         </div>
                     </div>
@@ -398,8 +396,8 @@
                 <div class="sheet-stunts">
                     <fieldset class="repeating_stunts">
                         <input type="text" name="attr_stunt-name" placeholder="Nom de la prouesse">
-                        <textarea class="sheet-autoresize-textarea" name="attr_stunt-description" placeholder="Description de la prouesse"></textarea>
-                        <hr class="sheet-ruler"/>
+                        <textarea class="sheet-autoresize-textarea" style="margin-bottom:5px;" name="attr_stunt-description" placeholder="Description de la prouesse"></textarea>
+                        <hr style="margin-top:0;margin-bottom:5px;" class="sheet-ruler" />
                     </fieldset>
                 </div>
             </div>
@@ -407,173 +405,65 @@
     </div>
 </div>
 
-<div class="sheet-tab sheet-tab-worksheet">
-    <h2 data-i18n="game-title">The Dresden Files Role-Playing Game</h2>
-    <h1 data-i18n="worksheet-title">Character Phases Worksheet</h1>
-
+<div class="sheet-tab sheet-tab-inventory">
+    <div class="sheet-2colrow">
+        <div class="sheet-col">
+          <img style="margin:auto;display:block;margin-top:15px;margin-bottom:15px;" src="http://i.imgur.com/2IknpGL.jpg" />
+        </div>
+        <div class="sheet-col">
+            <h3><strong>Vrais Objets Magiques</strong></h3>
+            <div class="sheet-section" style="position:relative">
+                <div class="sheet-stunts">
+                    <fieldset class="repeating_magicalItems">
+                        <input type="text" name="attr_magicalItems-name" placeholder="Nom">
+                        <input type="text" style="width:100%; font-variant:none;" name="attr_magicalItems-aspect" placeholder="Aspect">
+                        <textarea class="sheet-textarea-goodsize" style="margin-bottom:5px; font-style:italic;" name="attr_magicalItems-description" placeholder="Description"></textarea>
+                        <hr style="margin-top:0;margin-bottom:5px;" class="sheet-ruler" />
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="sheet-2colrow">
         <div class="sheet-col">
             <div class="sheet-input">
-                <div class="sheet-input-left" data-i18n="character">Character</div>
-                <input type="text" name="attr_character_name" title="@{character_name}">
+                <div class="sheet-input-right">Pièces d'or</div>
+                <input type="text" name="attr_gold_pieces" title="@{gold_pieces}" placeholder="0">
             </div>
-            <div class="sheet-input">
-                <div class="sheet-input-left" data-i18n="template">Template</div>
-                <input type="text" name="attr_template" title="@{template}">
-            </div>
-            <div class="sheet-input">
-                <div class="sheet-input-left" data-i18n="musts">Musts</div>
-                <input type="text" name="attr_musts" title="@{musts}">
-            </div>
+            <div class="sheet-section" style="position:relative">
+              <div class="sheet-stunts">
+                  <h3>Objets à Vendre</h3>
+                  <fieldset class="repeating_goldItems">
+                      <input style="width:70%" type="text" name="attr_goldItems-name" placeholder="Objet">
+                      <input style="float:right;width:25%;" name="attr_goldItems-value" type="number" value="0" />
+                  </fieldset>
+              </div>
+          </div>
         </div>
-
         <div class="sheet-col">
-            <div class="sheet-input">
-                <div class="sheet-input-right" data-i18n="player">Player</div>
-                <input type="text" name="attr_player" title="@{player}">
-            </div>
-            <div class="sheet-input">
-                <div class="sheet-input-right" data-i18n="concept-aspect">High Concept Aspect</div>
-                <input type="text" name="attr_concept" title="@{concept}">
-            </div>
-            <div class="sheet-input">
-                <div class="sheet-input-right" data-i18n="trouble-aspect">Trouble Aspect</div>
-                <input type="text" name="attr_trouble" title="@{trouble}">
-            </div>
+          <div class="sheet-section" style="position:relative">
+              <h3>Consommables</h3>
+              <div class="sheet-stunts">
+                  <fieldset class="repeating_consummables">
+                      <input style="width:80%" type="text" name="attr_consummables-name" placeholder="Type">
+                      <input style="float:right;" name="attr_consummables-number" type="number" value="0" />
+                      <textarea class="sheet-textarea-goodsize" style="margin-bottom:5px;height: 2em;" name="attr_consummables-effect" placeholder="Effets"></textarea>
+                  </fieldset>
+              </div>
+          </div>
         </div>
-    </div>
-
-    <div class="sheet-section">
-        <h3 data-i18n="background" data-i18n-vars="<strong>|</strong>">{{0}}Background:{{1}} Where did you come from?</h3>
-        <h3 class="sheet-phase sheet-phase-one" data-i18n="phase-one" data-i18n-vars="<strong>|</strong>">Phase {{0}}one{{1}}</h3>
-        <div class="sheet-2colrow">
-            <div class="sheet-col">
-                <p class="sheet-aspect-events" data-i18n="events">Events</p>
-                <textarea class="sheet-aspect-events" name="attr_phase-one-events" title="@{phase-one-events}"></textarea>
-            </div>
-
-            <div class="sheet-col">
-                <p class="sheet-aspect-desc" data-i18n="phase-one-description">
-                    What nation, region, culture are you from? What were your family circumstances like? What's your relationship with your family? How were you educated? What were your friends like? Did you get into trouble much? If you're supernatural, how early did you
-                    learn this? Were there problems?
-                </p>
-                <div class="sheet-input">
-                    <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
-                    <input type="text" name="attr_phase-one" title="@{phase-one}">
-                </div>
-            </div>
         </div>
-    </div>
-
-    <div class="sheet-section">
-        <h3 data-i18n="rising-conflict" data-i18n-vars="<strong>|</strong>">{{0}}Rising Conflict:{{1}} What shaped you?</h3>
-        <h3 class="sheet-phase sheet-phase-two" data-i18n="phase-two" data-i18n-vars="<strong>|</strong>">Phase {{0}}two{{1}}</h3>
-        <div class="sheet-2colrow">
-            <div class="sheet-col">
-                <p class="sheet-aspect-events" data-i18n="events">Events</p>
-                <textarea class="sheet-aspect-events" name="attr_phase-two-events" title="@{phase-two-events}"></textarea>
-            </div>
-
-            <div class="sheet-col">
-                <p class="sheet-aspect-desc" data-i18n="phase-two-description">
-                    Who were the prominent people in your life at this point? Do you have enemies? Close and fast friends? How did your high concept and trouble aspects shape you and events around you? What were the most significant choices you made? What lessons did you
-                    learn in this time?
-                </p>
-                <div class="sheet-input">
-                    <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
-                    <input type="text" name="attr_phase-two" title="@{phase-two}">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="sheet-section">
-        <h3 data-i18n="the-story" data-i18n-vars="<strong>|</strong>">{{0}}The Story:{{1}} What was your first adventure?</h3>
-        <h3 class="sheet-phase sheet-phase-three" data-i18n="phase-three" data-i18n-vars="<strong>|</strong>">Phase {{0}}three{{1}}</h3>
-        <div class="sheet-2colrow">
-            <div class="sheet-col">
-                <p class="sheet-aspect-events" data-i18n="events">Events</p>
-                <textarea class="sheet-aspect-events" name="attr_phase-three-events" title="@{phase-three-events}" style="margin-left: 31px"></textarea>
-            </div>
-
-            <div class="sheet-col">
-                <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="story-title">Story Title</p>
-                <input type="text" class="sheet-invisible" name="attr_phase-three-story-title" title="@{phase-three-story-title}">
-                <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="guest-starring">Guest Starring...</p>
-                <input type="text" class="sheet-invisible" name="attr_phase-three-guest" title="@{phase-three-guest}">
-                <div class="sheet-input">
-                    <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
-                    <input type="text" name="attr_phase-three" title="@{phase-three}">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="sheet-section">
-        <h3 data-i18n="guest-star" data-i18n-vars="<strong>|</strong>">{{0}}Guest Star:{{1}} Whose path have you crossed?</h3>
-        <h3 class="sheet-phase sheet-phase-four" data-i18n="phase-four" data-i18n-vars="<strong>|</strong>">Phase {{0}}four{{1}}</h3>
-        <div class="sheet-2colrow">
-            <div class="sheet-col">
-                <p class="sheet-aspect-events" data-i18n="events">Events</p>
-                <textarea class="sheet-aspect-events" name="attr_phase-four-events" title="@{phase-four-events}" style="margin-left: 31px"></textarea>
-            </div>
-
-            <div class="sheet-col">
-                <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="story-title">Story Title</p>
-                <input type="text" class="sheet-invisible" name="attr_phase-four-story-title" title="@{phase-four-story-title}">
-                <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="whose-story">Whose story was this? Who else was in it?</p>
-                <input type="text" class="sheet-invisible" name="attr_phase-four-guest" title="@{phase-four-guest}">
-                <div class="sheet-input">
-                    <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
-                    <input type="text" name="attr_phase-four" title="@{phase-four}">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="sheet-section">
-        <h3 data-i18n="guest-star-redux" data-i18n-vars="<strong>|</strong>">{{0}}Guest Star Redux:{{1}} Whose else's path have you crossed?</h3>
-        <h3 class="sheet-phase sheet-phase-five" data-i18n="phase-five" data-i18n-vars="<strong>|</strong>">Phase {{0}}five{{1}}</h3>
-        <div class="sheet-2colrow">
-            <div class="sheet-col">
-                <p class="sheet-aspect-events" data-i18n="events">Events</p>
-                <textarea class="sheet-aspect-events" name="attr_phase-five-events" title="@{phase-five-events}" style="margin-left: 31px"></textarea>
-            </div>
-
-            <div class="sheet-col">
-                <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="story-title">Story Title</p>
-                <input type="text" class="sheet-invisible" name="attr_phase-five-story-title" title="@{phase-five-story-title}">
-                <p class="sheet-aspect-desc sheet-aspect-label" data-i18n="whose-story">Whose story was this? Who else was in it?</p>
-                <input type="text" class="sheet-invisible" name="attr_phase-five-guest" title="@{phase-five-guest}">
-                <div class="sheet-input">
-                    <div class="sheet-input-right" data-i18n="phase-aspect">Phase Aspect</div>
-                    <input type="text" name="attr_phase-five" title="@{phase-five}">
-                </div>
-            </div>
+        <div class="sheet-section">
+          <h3>Autres</h3>
+          <textarea style="width:98%;height: 15em;" class="sheet-textarea-goodsize" name="attr_otherItems" title="@{otherItems}" ></textarea>
         </div>
     </div>
 </div>
 
 <script type="text/worker">
-    on('change:repeating_superb change:repeating_great change:repeating_good change:repeating_fair change:repeating_average '
-        + 'remove:repeating_superb remove:repeating_great remove:repeating_good remove:repeating_fair remove:repeating_average', function(eventInfo) {
-        getSectionIDs('repeating_superb', function(idarray) { setAttrs({ 'superb-count': idarray.length }); });
-        getSectionIDs('repeating_great', function(idarray) { setAttrs({ 'great-count': idarray.length }); });
-        getSectionIDs('repeating_good', function(idarray) { setAttrs({ 'good-count': idarray.length }); });
-        getSectionIDs('repeating_fair', function(idarray) { setAttrs({ 'fair-count': idarray.length }); });
-        getSectionIDs('repeating_average', function(idarray) { setAttrs({ 'average-count': idarray.length }); });
-    });
-
-    on('change:repeating_powers remove:repeating_powers', function(eventInfo) {
-        getSectionIDs('repeating_powers', function(idarray) {
-            var costIds = idarray.map(function(rowid) { return 'repeating_powers_' + rowid + '_power-cost'; });
-            getAttrs(costIds, function(values) {
-                var total = i = 0;
-                for(; i < costIds.length; i++) {
-                    total += parseInt(values[costIds[i]]) || 0;y
-                }
-                setAttrs({ 'total-refresh-adjustment': total });
-            });
-        });
-    });
-</script>
+    on('change:repeating_superb change:repeating_great change:repeating_good change:repeating_fair change:repeating_average ' + 'remove:repeating_superb remove:repeating_great remove:repeating_good remove:repeating_fair remove:repeating_average', function(eventInfo)
+    { getSectionIDs('repeating_superb', function(idarray) { setAttrs({ 'superb-count': idarray.length }); }); getSectionIDs('repeating_great', function(idarray) { setAttrs({ 'great-count': idarray.length }); }); getSectionIDs('repeating_good', function(idarray)
+    { setAttrs({ 'good-count': idarray.length }); }); getSectionIDs('repeating_fair', function(idarray) { setAttrs({ 'fair-count': idarray.length }); }); getSectionIDs('repeating_average', function(idarray) { setAttrs({ 'average-count': idarray.length
+    }); }); }); on('change:repeating_powers remove:repeating_powers', function(eventInfo) { getSectionIDs('repeating_powers', function(idarray) { var costIds = idarray.map(function(rowid) { return 'repeating_powers_' + rowid + '_power-cost'; }); getAttrs(costIds,
+    function(values) { var total = i = 0; for(; i
+    < costIds.length; i++) { total +=p arseInt(values[costIds[i]]) || 0;y } setAttrs({ 'total-refresh-adjustment': total }); }); }); }); </script>
