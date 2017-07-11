@@ -865,3 +865,130 @@ table.sheet-approach-table span.sheet-approach-span {
 img.sheet-grayscale {
   filter: grayscale(90%);
 }
+
+/*************************************************
+                  ROLL TEMPLATE
+**************************************************/
+.sheet-rolltemplate-5eInspired .sheet-rt-card {
+	width: 95%;
+	background-color: #FFFFFF;
+	font-size: 11px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: black 1px solid;
+	padding: 5px 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Generic header */
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header {
+	text-align: center;
+	position: relative;
+	color: #fff;
+	margin: 0 -10px 10px -10px;
+	padding: 0px 0px 10px 0px;
+	background-color: #28595D;
+	background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
+	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
+	box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header:before,
+.sheet-rolltemplate-5eInspired .sheet-rt-header:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-color: transparent;
+	bottom: -10px;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header:before {
+	border-width: 0 10px 10px 0;
+	border-right-color: #354E50;
+	left: 0;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header:after {
+	border-width: 0 0 10px 10px;
+	border-left-color: #354E50;
+	right: 0;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-title {
+	font-size: 1.5em;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-subheader {}
+
+/* What's inside */
+
+.sheet-rolltemplate-5eInspired .sheet-rt-key-wide {
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2em;
+	-moz-text-decoration-color: #D64541;
+	text-decoration-color: #D64541;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 2px 2px 2px 0px;
+  text-align: center;
+  width:35%;
+}
+
+.sheet-padr,
+.sheet-rolltemplate-5eInspired .sheet-padr {
+	padding-right: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sheet-padl,
+.sheet-rolltemplate-5eInspired .sheet-padl {
+	padding-left: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-col{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
+	text-rendering: auto;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-value {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  text-align: : right;
+  vertical-align: middle;
+  width:60%;
+  font-size: 0.8em;
+  color: grey;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rtcrit {
+  color: green !important;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rtfumb {
+  color: red !important;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullfail . .sheet-rolltemplate-5eInspired .sheet-rt-value .sheet-no-roll-highlight .inlinerollresult .fullcrit {
+	border: 0;
+}
+
+
+/*** ROLL TEMPLATE STYLING ENDS HERE **/

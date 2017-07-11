@@ -257,7 +257,7 @@
                                 <input class="sheet-approach-value" name="attr_astucieux" title="@{astucieux}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_astucieux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{astucieux}]]}}"></button>
+                                <button name="roll_astucieux" type="roll" value="!fate @{astucieux} Astucieux"></button>
                             </td>
                             <td>
                                 <span class="sheet-approach-span">Astucieux</span>
@@ -266,7 +266,7 @@
                                 <span class="sheet-approach-span">Rapide</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_rapide" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{rapide}]]}}"></button>
+                                <button name="roll_rapide" type="roll" value="!fate @{rapide} Rapide"></button>
                             </td>
                             <td class="sheet-approach-td-value">
                                 <input class="sheet-approach-value" name="attr_rapide" title="@{rapide}" type="number" />
@@ -277,7 +277,7 @@
                                 <input class="sheet-approach-value" name="attr_flamboyant" title="@{flamboyant}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_flamboyant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{flamboyant}]]}}"></button>
+                                <button name="roll_flamboyant" type="roll" value="!fate @{flamboyant} Flamboyant"></button>
                             </td>
                             <td>
                                 <span class="sheet-approach-span">Flamboyant</span>
@@ -286,7 +286,7 @@
                                 <span class="sheet-approach-span">Soigneux</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_soigneux" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{soigneux}]]}}"></button>
+                                <button name="roll_soigneux" type="roll" value="!fate @{soigneux} Soigneux"></button>
                             </td>
                             <td class="sheet-approach-td-value">
                                 <input class="sheet-approach-value" name="attr_soigneux" title="@{soigneux}" type="number" />
@@ -297,7 +297,7 @@
                                 <input class="sheet-approach-value" name="attr_puissant" title="@{puissant}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_puissant" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{puissant}]]}}"></button>
+                                <button name="roll_puissant" type="roll" value="!fate @{puissant} Puissant"></button>
                             </td>
                             <td>
                                 <span class="sheet-approach-span">Puissant</span>
@@ -306,7 +306,7 @@
                                 <span class="sheet-approach-span">Sournois</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_sournois" type="roll" value="&amp;{template:FAE} {{name=@{name}}} {{approach=Careful}} {{roll=[[4DF+@{sournois}]]}}"></button>
+                                <button name="roll_sournois" type="roll" value="!fate @{sournois} Sournois"></button>
                             </td>
                             <td class="sheet-approach-td-value">
                                 <input class="sheet-approach-value" name="attr_sournois" title="@{sournois}" type="number" />
@@ -467,3 +467,21 @@
     }); }); }); on('change:repeating_powers remove:repeating_powers', function(eventInfo) { getSectionIDs('repeating_powers', function(idarray) { var costIds = idarray.map(function(rowid) { return 'repeating_powers_' + rowid + '_power-cost'; }); getAttrs(costIds,
     function(values) { var total = i = 0; for(; i
     < costIds.length; i++) { total +=p arseInt(values[costIds[i]]) || 0;y } setAttrs({ 'total-refresh-adjustment': total }); }); }); }); </script>
+
+<rolltemplate class="sheet-rolltemplate-5eInspired">
+	<div class="sheet-rt-card">
+		<div class="sheet-rt-header">
+      {{#subheader}}
+			<div class="sheet-rt-subheader">{{subheader}}{{#subheaderright}} &bullet; {{subheaderright}}{{/subheaderright}}</div>
+			{{/subheader}} {{#subheader2}}
+			<div class="sheet-rt-subheader">{{subheader2}}{{#subheaderright2}} &bullet; {{subheaderright2}}{{/subheaderright2}}</div>
+			{{/subheader2}}
+			<div class="sheet-rt-title">{{title}}</div>
+		</div>
+		<div class="sheet-main-content">
+			<div class="sheet-row">
+				<div class="sheet-col sheet-padl sheet-padr sheet-rt-key-wide {{#critical}}rtcrit{{/critical}} {{#fumble}}rtfumb{{/fumble}}">{{result}}</div>
+				<div class="sheet-col sheet-padl sheet-padr sheet-rt-value"> Jet : {{roll}} | Mod. : {{bonus}}</div>
+			</div>
+	</div>
+</rolltemplate>
