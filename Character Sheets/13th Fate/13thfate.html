@@ -246,7 +246,6 @@
                 <div style="width:50%; display:inline-block;">
                     <h3 style="text-align:left; margin-left:5px;"><strong>Caractéristiques</strong></h3>
                 </div>
-
                 <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="approaches" checked="checked">
                 <input type="radio" class="sheet-sktab-switch" name="attr_sktab" value="skills">
 
@@ -254,65 +253,68 @@
                     <table class="sheet-approach-table">
                         <tr>
                             <td class="sheet-approach-td-value">
-                                <input class="sheet-approach-value" name="attr_astucieux" title="@{astucieux}" type="number" />
+                                <input class="sheet-approach-value" name="attr_astuce" title="@{astuce}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_astucieux" type="roll" value="!fate @{astucieux} Astucieux"></button>
+                                <button name="roll_astuce" type="roll" value="!fr @{astuce} @{name} Astuce"></button>
                             </td>
                             <td>
-                                <span class="sheet-approach-span">Astucieux</span>
+                                <span class="sheet-approach-span">Astuce</span>
                             </td>
                             <td class="sheet-approach-td-label-right">
-                                <span class="sheet-approach-span">Rapide</span>
+                                <span class="sheet-approach-span">Précaution</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_rapide" type="roll" value="!fate @{rapide} Rapide"></button>
+                                <button name="roll_precaution" type="roll" value="!fr @{precaution} @{name} Précaution"></button>
                             </td>
                             <td class="sheet-approach-td-value">
-                                <input class="sheet-approach-value" name="attr_rapide" title="@{rapide}" type="number" />
+                                <input class="sheet-approach-value" name="attr_precaution" title="@{precaution}" type="number" />
                             </td>
                         </tr>
                         <tr>
                             <td class="sheet-approach-td-value">
-                                <input class="sheet-approach-value" name="attr_flamboyant" title="@{flamboyant}" type="number" />
+                                <input class="sheet-approach-value" name="attr_eclat" title="@{eclat}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_flamboyant" type="roll" value="!fate @{flamboyant} Flamboyant"></button>
+                                <button name="roll_eclat" type="roll" value="!fr @{eclat} @{name} Eclat"></button>
                             </td>
                             <td>
-                                <span class="sheet-approach-span">Flamboyant</span>
+                                <span class="sheet-approach-span">Eclat</span>
                             </td>
                             <td class="sheet-approach-td-label-right">
-                                <span class="sheet-approach-span">Soigneux</span>
+                                <span class="sheet-approach-span">Sournoiserie</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_soigneux" type="roll" value="!fate @{soigneux} Soigneux"></button>
+                                <button name="roll_sournoiserie" type="roll" value="!fr @{sournoiserie} @{name} Sournoiserie"></button>
                             </td>
                             <td class="sheet-approach-td-value">
-                                <input class="sheet-approach-value" name="attr_soigneux" title="@{soigneux}" type="number" />
+                                <input class="sheet-approach-value" name="attr_sournoiserie" title="@{sournoiserie}" type="number" />
                             </td>
                         </tr>
                         <tr>
                             <td class="sheet-approach-td-value">
-                                <input class="sheet-approach-value" name="attr_puissant" title="@{puissant}" type="number" />
+                                <input class="sheet-approach-value" name="attr_puissance" title="@{puissance}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_puissant" type="roll" value="!fate @{puissant} Puissant"></button>
+                                <button name="roll_puissance" type="roll" value="!fr @{puissance} @{name} Puissance"></button>
                             </td>
                             <td>
-                                <span class="sheet-approach-span">Puissant</span>
+                                <span class="sheet-approach-span">Puissance</span>
                             </td>
                             <td class="sheet-approach-td-label-right">
-                                <span class="sheet-approach-span">Sournois</span>
+                                <span class="sheet-approach-span">Rapidité</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_sournois" type="roll" value="!fate @{sournois} Sournois"></button>
+                                <button name="roll_rapidite" type="roll" value="!fr @{rapidite} @{name} Rapidité"></button>
                             </td>
                             <td class="sheet-approach-td-value">
-                                <input class="sheet-approach-value" name="attr_sournois" title="@{sournois}" type="number" />
+                                <input class="sheet-approach-value" name="attr_rapidite" title="@{rapidite}" type="number" />
                             </td>
                         </tr>
                     </table>
+                    <div style="margin:auto;width:30%;margin-top:5px;margin-bottom:5px;">
+                      <button name="roll_discreet" type="roll" value="!fsr ?{Modificateur|0} @{name}"> Jet secret</button>
+                    </div>
                 </div>
                 <div class="sheet-sktab-content sheet-sktab-skills">
                     <div class="sheet-superb-skills">
@@ -470,18 +472,27 @@
 
 <rolltemplate class="sheet-rolltemplate-5eInspired">
 	<div class="sheet-rt-card">
-		<div class="sheet-rt-header">
+		<div class="sheet-rt-header" style="{{#color}}background-color:{{color}} !important;{{/color}}">
       {{#subheader}}
-			<div class="sheet-rt-subheader">{{subheader}}{{#subheaderright}} &bullet; {{subheaderright}}{{/subheaderright}}</div>
+			<div class="sheet-rt-subheader">{{subheader}}{{#subheaderright}} avec {{subheaderright}}{{/subheaderright}}</div>
 			{{/subheader}} {{#subheader2}}
 			<div class="sheet-rt-subheader">{{subheader2}}{{#subheaderright2}} &bullet; {{subheaderright2}}{{/subheaderright2}}</div>
 			{{/subheader2}}
 			<div class="sheet-rt-title">{{title}}</div>
 		</div>
+
 		<div class="sheet-main-content">
+      {{#roll}}
 			<div class="sheet-row">
 				<div class="sheet-col sheet-padl sheet-padr sheet-rt-key-wide {{#critical}}rtcrit{{/critical}} {{#fumble}}rtfumb{{/fumble}}">{{result}}</div>
 				<div class="sheet-col sheet-padl sheet-padr sheet-rt-value"> Jet : {{roll}} | Mod. : {{bonus}}</div>
 			</div>
+      {{/roll}}{{#message}}
+      <div class="sheet-row">
+				<div class="sheet-col sheet-padl sheet-padr" style="width:98%;text-align:center;">{{message}}</div>
+			</div>
+      {{/message}}
 	</div>
+
+
 </rolltemplate>
