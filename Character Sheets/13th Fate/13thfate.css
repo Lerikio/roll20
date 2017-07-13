@@ -717,7 +717,7 @@ div.sheet-movers-shakers textarea:nth-child(4) {
 }
 
 input.sheet-invisible {
-    width: 100%;
+    width: 90%; 
     border: none;
 }
 
