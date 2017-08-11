@@ -79,9 +79,6 @@ on("chat:message", function(msg) {
 // Use: !fr <modifier> <character name> <approach>
 on("chat:message", function(msg) {
   if(msg.type == "api" && msg.content.indexOf("!fr ") !== -1) {
-    log(msg.playerid);
-    log(getObj("player", msg.playerid));
-    log(getObj("player", msg.playerid)["color"]);
     var color = getObj("player", msg.playerid)["color"];
     var parameters = msg.content.replace("!fr ", "").split(" ");
     var bonus = parameters[0];

@@ -7,26 +7,26 @@
         <div class="sheet-col">
             <div class="sheet-input">
                 <div class="sheet-input-right">Personnage</div>
-                <input type="text" name="attr_name" title="@{name}" placeholder="Nom">
+                <input type="text" name="attr_character_name" title="@{character_name}" placeholder="Nom">
             </div>
             <div class="sheet-section">
                 <h4>Concept</h4>
                 <input type="text" class="sheet-invisible" name="attr_concept" title="@{concept}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Concept}} {{subheader=@{name}}} {{message=@{concept}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Concept}} {{aspect=1}} {{subheader=@{character_name}}} {{message=@{concept}}}"></button>
                 <h4>Trouble</h4>
                 <input type="text" class="sheet-invisible" name="attr_trouble" title="@{trouble}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Trouble}} {{subheader=@{name}}} {{message=@{trouble}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Trouble}} {{aspect=1}} {{subheader=@{character_name}}} {{message=@{trouble}}}"></button>
                 <h4>Aspects</h4>
                 <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-one" title="@{phase-one}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{subheader=@{name}}} {{message=@{phase-one}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{headerType=aspect}} {{subheader=@{character_name}}} {{message=@{phase-one}}}"></button>
                 <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-two" title="@{phase-two}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{subheader=@{name}}} {{message=@{phase-two}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{headerType=aspect}} {{subheader=@{character_name}}} {{message=@{phase-two}}}"></button>
                 <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-three" title="@{phase-three}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{subheader=@{name}}} {{message=@{phase-three}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{headerType=aspect}} {{subheader=@{character_name}}} {{message=@{phase-three}}}"></button>
                 <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-four" title="@{phase-four}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{subheader=@{name}}} {{message=@{phase-four}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{headerType=aspect}} {{subheader=@{character_name}}} {{message=@{phase-four}}}"></button>
                 <input type="text" class="sheet-invisible" style="margin-bottom:5px" name="attr_phase-five" title="@{phase-five}">
-                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{subheader=@{name}}} {{message=@{phase-five}}}"></button>
+                <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=Aspect}} {{headerType=aspect}} {{subheader=@{character_name}}} {{message=@{phase-five}}}"></button>
             </div>
 
             <div class="sheet-section">
@@ -263,7 +263,7 @@
                                 <input class="sheet-approach-value" name="attr_astuce" title="@{astuce}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_astuce" type="roll" value="!fr @{astuce} @{name} Astuce"></button>
+                                <button name="roll_astuce" type="roll" value="!fr @{astuce} @{character_name} Astuce"></button>
                             </td>
                             <td>
                                 <span class="sheet-approach-span">Astuce</span>
@@ -272,7 +272,7 @@
                                 <span class="sheet-approach-span">Précaution</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_precaution" type="roll" value="!fr @{precaution} @{name} Précaution"></button>
+                                <button name="roll_precaution" type="roll" value="!fr @{precaution} @{character_name} Précaution"></button>
                             </td>
                             <td class="sheet-approach-td-value">
                                 <input class="sheet-approach-value" name="attr_precaution" title="@{precaution}" type="number" />
@@ -283,7 +283,7 @@
                                 <input class="sheet-approach-value" name="attr_eclat" title="@{eclat}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_eclat" type="roll" value="!fr @{eclat} @{name} Eclat"></button>
+                                <button name="roll_eclat" type="roll" value="!fr @{eclat} @{character_name} Eclat"></button>
                             </td>
                             <td>
                                 <span class="sheet-approach-span">Eclat</span>
@@ -292,7 +292,7 @@
                                 <span class="sheet-approach-span">Sournoiserie</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_sournoiserie" type="roll" value="!fr @{sournoiserie} @{name} Sournoiserie"></button>
+                                <button name="roll_sournoiserie" type="roll" value="!fr @{sournoiserie} @{character_name} Sournoiserie"></button>
                             </td>
                             <td class="sheet-approach-td-value">
                                 <input class="sheet-approach-value" name="attr_sournoiserie" title="@{sournoiserie}" type="number" />
@@ -303,7 +303,7 @@
                                 <input class="sheet-approach-value" name="attr_puissance" title="@{puissance}" type="number" />
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_puissance" type="roll" value="!fr @{puissance} @{name} Puissance"></button>
+                                <button name="roll_puissance" type="roll" value="!fr @{puissance} @{character_name} Puissance"></button>
                             </td>
                             <td>
                                 <span class="sheet-approach-span">Puissance</span>
@@ -312,7 +312,7 @@
                                 <span class="sheet-approach-span">Rapidité</span>
                             </td>
                             <td class="sheet-approach-td-roll">
-                                <button name="roll_rapidite" type="roll" value="!fr @{rapidite} @{name} Rapidité"></button>
+                                <button name="roll_rapidite" type="roll" value="!fr @{rapidite} @{character_name} Rapidité"></button>
                             </td>
                             <td class="sheet-approach-td-value">
                                 <input class="sheet-approach-value" name="attr_rapidite" title="@{rapidite}" type="number" />
@@ -320,7 +320,7 @@
                         </tr>
                     </table>
                     <div style="margin:auto;width:30%;margin-top:5px;margin-bottom:5px;">
-                      <button name="roll_discreet" type="roll" value="!fsr ?{Modificateur|0} @{name}"> Jet secret</button>
+                      <button name="roll_discreet" type="roll" value="!fsr ?{Modificateur|0} @{character_name}"> Jet secret</button>
                     </div>
                 </div>
                 <div class="sheet-sktab-content sheet-sktab-skills">
@@ -405,8 +405,9 @@
                 <div class="sheet-stunts">
                     <fieldset class="repeating_stunts">
                         <input type="text" name="attr_stunt-name" placeholder="Nom de la prouesse">
+                        <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=@{stunt-name}}} {{headerType=prouesse}} {{subheader=@{character_name} - Prouesse}} {{message=@{stunt-description}}}"></button>
                         <textarea class="sheet-autoresize-textarea" style="margin-bottom:5px;" name="attr_stunt-description" placeholder="Description de la prouesse"></textarea>
-                        <hr style="margin-top:0;margin-bottom:5px;" class="sheet-ruler" />
+                        <hr style="margin-top:0;margin-bottom:5px;" class="sheet-ruler"/>
                     </fieldset>
                 </div>
             </div>
@@ -425,6 +426,7 @@
                 <div class="sheet-stunts">
                     <fieldset class="repeating_magicalItems">
                         <input type="text" name="attr_magicalItems-name" placeholder="Nom">
+                        <button name="roll_astuce" type="roll" value="&{template:5eInspired} {{title=@{magicalItems-aspect}}} {{headerType=weapon}} {{subheader=@{magicalItems-name}}} {{message=@{magicalItems-description}}}"></button>
                         <input type="text" style="width:100%; font-variant:none;" name="attr_magicalItems-aspect" placeholder="Aspect">
                         <textarea class="sheet-textarea-goodsize" style="margin-bottom:5px; font-style:italic;" name="attr_magicalItems-description" placeholder="Description"></textarea>
                         <hr style="margin-top:0;margin-bottom:5px;" class="sheet-ruler" />
@@ -479,7 +481,7 @@
 
 <rolltemplate class="sheet-rolltemplate-5eInspired">
 	<div class="sheet-rt-card">
-		<div class="sheet-rt-header" style="{{#color}}background-color:{{color}} !important;{{/color}}">
+		<div class="sheet-rt-header {{headerType}}" style="{{#color}}background-color:{{color}} !important;{{/color}}">
       {{#subheader}}
 			<div class="sheet-rt-subheader">{{subheader}}{{#subheaderright}} avec {{subheaderright}}{{/subheaderright}}</div>
 			{{/subheader}} {{#subheader2}}

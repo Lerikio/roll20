@@ -717,7 +717,7 @@ div.sheet-movers-shakers textarea:nth-child(4) {
 }
 
 input.sheet-invisible {
-    width: 90%; 
+    width: 90%;
     border: none;
 }
 
@@ -889,13 +889,49 @@ img.sheet-grayscale {
 	text-align: center;
 	position: relative;
 	color: #fff;
-	margin: 0 -10px 10px -10px;
+	margin: 5px -10px 10px -10px;
 	padding: 0px 0px 10px 0px;
 	background-color: #28595D;
 	background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
 	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
 	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
 	box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-aspect {
+	background-color: #45285D;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-aspect:before {
+	border-right-color: #443550;
+}
+y
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-aspect:after {
+	border-left-color: #443550;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-prouesse {
+	background-color: #2C5D28;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-prouesse:before {
+	border-right-color: #375035;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-prouesse:after {
+	border-left-color: #375035;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-weapon {
+	background-color: #5D2828;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-weapon:before {
+	border-right-color: #503535;
+}
+
+.sheet-rolltemplate-5eInspired .sheet-rt-header.sheet-weapon:after {
+	border-left-color: #503535;
 }
 
 .sheet-rolltemplate-5eInspired .sheet-rt-header:before,
